@@ -15,12 +15,11 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+protected:
+    void paintEvent(QPaintEvent * event);
+
 private slots:
-    void on_pushButton_25_clicked();
 
-    void on_pushButton_25_pressed();
-
-    void on_pushButton_25_released();
 
 private:
     Ui::MainWindow *ui;

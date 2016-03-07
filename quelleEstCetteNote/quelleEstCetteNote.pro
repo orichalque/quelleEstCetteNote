@@ -14,9 +14,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    touche.cpp
+    touche.cpp \
+    mywidget.cpp
 
 HEADERS  += mainwindow.h \
-    touche.h
+    touche.h \
+    mywidget.h
 
 FORMS    += mainwindow.ui
+
+CONFIG += console
