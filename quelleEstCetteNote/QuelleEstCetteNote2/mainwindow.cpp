@@ -89,29 +89,59 @@ void MainWindow::paintEvent(QPaintEvent * event)
     qreal yNote = (upSpace + 0.207*h);
 
     QRectF *rect;
+    QLine *line;
     //(xNote,yNote , w*0.025 ,interLineSpace)
     vector<QRectF *> rectToDraw;
     for (auto note : notes){
-        if (note == "cm" || note =="dom")  rect = new QRectF(xNote,yNote , w*0.025 ,interLineSpace);
-        if (note == "dm" || note =="rem")  rect = new QRectF(xNote,yNote - 0.5*interLineSpace, w*0.025 ,interLineSpace);
-        if (note == "em" || note =="mim")  rect = new QRectF(xNote,yNote -1 *interLineSpace, w*0.025 ,interLineSpace);
-        if (note == "fm" || note =="fam")  rect = new QRectF(xNote,yNote -1.5*interLineSpace, w*0.025 ,interLineSpace);
-        if (note == "gm" || note =="solm") rect = new QRectF(xNote,yNote -2*interLineSpace, w*0.025 ,interLineSpace);
-        if (note == "am" || note =="lam")  rect = new QRectF(xNote,yNote -Q2.5*interLineSpace, w*0.025 ,interLineSpace);
-        if (note == "bm" || note =="sim")  rect = new QRectF(xNote,yNote -3*interLineSpace, w*0.025 ,interLineSpace);
+        if (note == "cm" || note =="dom"){
+            rect = new QRectF(xNote,yNote , w*0.025 ,interLineSpace);
+            line = new QLine(xNote + 0.026*w, yNote+0.5*interLineSpace, xNote + 0.026*w, yNote-3*interLineSpace);
+        }
+        if (note == "dm" || note =="rem"){
+            rect = new QRectF(xNote,yNote - 0.5*interLineSpace, w*0.025 ,interLineSpace);
+        }
+        if (note == "em" || note =="mim"){
+            rect = new QRectF(xNote,yNote -1 *interLineSpace, w*0.025 ,interLineSpace);
+        }
+        if (note == "fm" || note =="fam"){
+            rect = new QRectF(xNote,yNote -1.5*interLineSpace, w*0.025 ,interLineSpace);
+        }
+        if (note == "gm" || note =="solm"){
+            rect = new QRectF(xNote,yNote -2*interLineSpace, w*0.025 ,interLineSpace);
+        }
+        if (note == "am" || note =="lam"){
+            rect = new QRectF(xNote,yNote -2.5*interLineSpace, w*0.025 ,interLineSpace);
+        }
+        if (note == "bm" || note =="sim"){
+            rect = new QRectF(xNote,yNote -3*interLineSpace, w*0.025 ,interLineSpace);
+        }
 
-        if (note == "cM" || note =="doM")  rect = new QRectF(xNote,yNote -3.5*interLineSpace, w*0.025 ,interLineSpace);
-        if (note == "dM" || note =="reM")  rect = new QRectF(xNote,yNote -4*interLineSpace, w*0.025 ,interLineSpace);
-        if (note == "eM" || note =="miM")  rect = new QRectF(xNote,yNote -4.5*interLineSpace, w*0.025 ,interLineSpace);
-        if (note == "fM" || note =="faM")  rect = new QRectF(xNote,yNote -5*interLineSpace, w*0.025 ,interLineSpace);
-        if (note == "gM" || note =="solM") rect = new QRectF(xNote,yNote -5.5*interLineSpace, w*0.025 ,interLineSpace);
-        if (note == "aM" || note =="laM")  rect = new QRectF(xNote,yNote -6*interLineSpace, w*0.025 ,interLineSpace);
-        if (note == "bM" || note =="siM")  rect = new QRectF(xNote,yNote -6.5*interLineSpace, w*0.025 ,interLineSpace);
-
+        if (note == "cM" || note =="doM"){
+            rect = new QRectF(xNote,yNote -3.5*interLineSpace, w*0.025 ,interLineSpace);
+        }
+        if (note == "dM" || note =="reM"){
+            rect = new QRectF(xNote,yNote -4*interLineSpace, w*0.025 ,interLineSpace);
+        }
+        if (note == "eM" || note =="miM"){
+            rect = new QRectF(xNote,yNote -4.5*interLineSpace, w*0.025 ,interLineSpace);
+        }
+        if (note == "fM" || note =="faM"){
+            rect = new QRectF(xNote,yNote -5*interLineSpace, w*0.025 ,interLineSpace);
+        }
+        if (note == "gM" || note =="solM"){
+            rect = new QRectF(xNote,yNote -5.5*interLineSpace, w*0.025 ,interLineSpace);
+        }
+        if (note == "aM" || note =="laM"){
+            rect = new QRectF(xNote,yNote -6*interLineSpace, w*0.025 ,interLineSpace);
+        }
+        if (note == "bM" || note =="siM"){
+            rect = new QRectF(xNote,yNote -6.5*interLineSpace, w*0.025 ,interLineSpace);
+        }
 
         rectToDraw.push_back(rect);
         p.setBrush(QBrush(Qt::black));
         p.drawEllipse(*rect);
+        p.drawLine(*line);
         xNote = xNote + 0.045*w;
     }
 

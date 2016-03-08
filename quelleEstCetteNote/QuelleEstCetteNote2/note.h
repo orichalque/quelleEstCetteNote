@@ -24,7 +24,7 @@ public:
     void drawRed(QPainter p);
     void drawGreen(QPainter p);
 private:
-    QString note;
+    QString noteName;
     QRectF rect;
     QLine tail;
 };

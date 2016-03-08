@@ -5,13 +5,13 @@ note::note()
 }
 
 note::note(QString n, QRectF r, QLine l){
-    note = n;
+    noteName = n;
     rect = r;
     tail = l;
 }
 
 QString note::getNote(){
-    return note;
+    return noteName;
 }
 
 QRectF note::getRect(){
