@@ -29,7 +29,13 @@ void MainWindow::paintEvent(QPaintEvent * event)
     notes.push_back("gm");
     notes.push_back("am");
     notes.push_back("bm");
-
+    notes.push_back("cM");
+    notes.push_back("dM");
+    notes.push_back("eM");
+    notes.push_back("fM");
+    notes.push_back("gM");
+    notes.push_back("aM");
+    notes.push_back("bM");
     int w = width();
     int h = height();
 
@@ -37,7 +43,7 @@ void MainWindow::paintEvent(QPaintEvent * event)
     //TODO
     int noteAmount = 15;
 
-    float lineLength = w * (0.70); //57% of width
+    float lineLength = w * (0.70); //70% of width
 
     // 0-12 note -> 1 line
     // 12 - 24 -> 2 line
@@ -51,7 +57,7 @@ void MainWindow::paintEvent(QPaintEvent * event)
     float xBegin(0.15*w); //15% of width
     float xEnd(xBegin+lineLength);
 
-    float y(0);
+    float y(upSpace);
     qDebug() << QString::number(nbOfLine);
     for (int i = 0; i < nbOfLine; ++i){
         y += upSpace;
@@ -71,19 +77,49 @@ void MainWindow::paintEvent(QPaintEvent * event)
 
     //C key placement
     QImage key(":/new/prefix1/clef.png");
-    key = key.scaled(2.5* interLineSpace, 6.5*interLineSpace);
-    p.drawImage(0.15*w, 0.035*h / nbOfLine, key);
+    key = key.scaled(0.05*w, 6.5*interLineSpace);
+    p.drawImage(0.15*w, 0.035*h / nbOfLine + upSpace, key);
 
     //Notes
     // interLineSpace hauteur de la note
     float noteWidth = interLineSpace;
     //noteWidth a definir en fonction de la largeur de l'ecran
 
-    qreal xNote = 0.25*w;
-    qreal yNote = (5.5*interLineSpace);
+    qreal xNote = 0.22*w;
+    qreal yNote = (upSpace + 0.207*h);
 
-    QRectF rect(xNote,yNote ,interLineSpace,interLineSpace);
-    p.drawEllipse(rect);
+    QRectF *rect;
+    //(xNote,yNote , w*0.025 ,interLineSpace)
+    vector<QRectF *> rectToDraw;
+    for (auto note : notes){
+        if (note == "cm" || note =="dom")  rect = new QRectF(xNote,yNote , w*0.025 ,interLineSpace);
+        if (note == "dm" || note =="rem")  rect = new QRectF(xNote,yNote - 0.5*interLineSpace, w*0.025 ,interLineSpace);
+        if (note == "em" || note =="mim")  rect = new QRectF(xNote,yNote -1 *interLineSpace, w*0.025 ,interLineSpace);
+        if (note == "fm" || note =="fam")  rect = new QRectF(xNote,yNote -1.5*interLineSpace, w*0.025 ,interLineSpace);
+        if (note == "gm" || note =="solm") rect = new QRectF(xNote,yNote -2*interLineSpace, w*0.025 ,interLineSpace);
+        if (note == "am" || note =="lam")  rect = new QRectF(xNote,yNote -Q2.5*interLineSpace, w*0.025 ,interLineSpace);
+        if (note == "bm" || note =="sim")  rect = new QRectF(xNote,yNote -3*interLineSpace, w*0.025 ,interLineSpace);
+
+        if (note == "cM" || note =="doM")  rect = new QRectF(xNote,yNote -3.5*interLineSpace, w*0.025 ,interLineSpace);
+        if (note == "dM" || note =="reM")  rect = new QRectF(xNote,yNote -4*interLineSpace, w*0.025 ,interLineSpace);
+        if (note == "eM" || note =="miM")  rect = new QRectF(xNote,yNote -4.5*interLineSpace, w*0.025 ,interLineSpace);
+        if (note == "fM" || note =="faM")  rect = new QRectF(xNote,yNote -5*interLineSpace, w*0.025 ,interLineSpace);
+        if (note == "gM" || note =="solM") rect = new QRectF(xNote,yNote -5.5*interLineSpace, w*0.025 ,interLineSpace);
+        if (note == "aM" || note =="laM")  rect = new QRectF(xNote,yNote -6*interLineSpace, w*0.025 ,interLineSpace);
+        if (note == "bM" || note =="siM")  rect = new QRectF(xNote,yNote -6.5*interLineSpace, w*0.025 ,interLineSpace);
+
+
+        rectToDraw.push_back(rect);
+        p.setBrush(QBrush(Qt::black));
+        p.drawEllipse(*rect);
+        xNote = xNote + 0.045*w;
+    }
+
+    p.setBrush(QBrush(Qt::red));
+
+    for (auto ellipse : rectToDraw){
+        p.drawEllipse(*ellipse);
+    }
 
 
 
