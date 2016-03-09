@@ -6,6 +6,9 @@
 #include <QRectF>
 #include <QPainter>
 #include <QBrush>
+#include <chrono>
+#include <thread>
+
 class note
 {
 public:
@@ -20,13 +23,17 @@ public:
     QRectF getRect();
     QLine getTail();
 
-    void draw(QPainter p);
-    void drawRed(QPainter p);
-    void drawGreen(QPainter p);
+    void draw(QPainter *p);
+    void drawRed(QPainter *p);
+    void drawGreen(QPainter *p);
+
+    void correct(QPainter *p);
+    static void correctAll(std::vector<note> notes, QPainter *p);
 private:
     QString noteName;
     QRectF rect;
     QLine tail;
+    bool success;
 };
 
 #endif // NOTE_H
