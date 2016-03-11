@@ -3,95 +3,95 @@ Piano::Piano(QWidget *parent) :
     QWidget(parent)
 {
     this->setFixedSize(1200,800);
-    Touche* dom = new Touche(this, QString("tab"),QString("Dom"));
-    int sizeT= dom->width();
+    Touche* doM = new Touche(this, QString("tab"),QString("DoM"));
+    int sizeT= doM->width();
     int nT =2;
-    dom->move(sizeT*nT,10);
-    nT+=1;
-    Touche* rem = new Touche(this, QString("A"),QString("Rém"));
-    rem->move(sizeT*nT,10);
-    nT+=1;
-    Touche* mim = new Touche(this, QString("Z"),QString("Mim"));
-    mim->move(sizeT*nT,10);
-    nT+=1;
-    Touche* fam = new Touche(this, QString("E"),QString("Fam"));
-    fam->move(sizeT*nT,10);
-    nT+=1;
-    Touche* solm = new Touche(this, QString("R"),QString("Solm"));
-    solm->move(sizeT*nT,10);
-    nT+=1;
-    Touche* lam = new Touche(this, QString("T"),QString("Lam"));
-    lam->move(sizeT*nT,10);
-    nT+=1;
-    Touche* sim = new Touche(this, QString("Y"),QString("sim"));
-    sim->move(sizeT*nT,10);
-    nT+=1;
-
-    Touche* doM = new Touche(this, QString("U"),QString("DoM"));
     doM->move(sizeT*nT,10);
     nT+=1;
-    Touche* reM = new Touche(this, QString("I"),QString("RéM"));
+    Touche* reM = new Touche(this, QString("A"),QString("RéM"));
     reM->move(sizeT*nT,10);
     nT+=1;
-    Touche* miM = new Touche(this, QString("O"),QString("MiM"));
+    Touche* miM = new Touche(this, QString("Z"),QString("MiM"));
     miM->move(sizeT*nT,10);
     nT+=1;
-    Touche* faM = new Touche(this, QString("P"),QString("FaM"));
+    Touche* faM = new Touche(this, QString("E"),QString("FaM"));
     faM->move(sizeT*nT,10);
     nT+=1;
-    Touche* solM = new Touche(this, QString("¨"),QString("SolM"));
+    Touche* solM = new Touche(this, QString("R"),QString("SolM"));
     solM->move(sizeT*nT,10);
     nT+=1;
-    Touche* laM = new Touche(this, QString("$"),QString("LaM"));
+    Touche* laM = new Touche(this, QString("T"),QString("LaM"));
     laM->move(sizeT*nT,10);
     nT+=1;
-    Touche* siM = new Touche(this, QString("Entree"),QString("siM"));
+    Touche* siM = new Touche(this, QString("Y"),QString("siM"));
     siM->move(sizeT*nT,10);
+    nT+=1;
+
+    Touche* dom = new Touche(this, QString("U"),QString("Dom"));
+    dom->move(sizeT*nT,10);
+    nT+=1;
+    Touche* rem = new Touche(this, QString("I"),QString("Rém"));
+    rem->move(sizeT*nT,10);
+    nT+=1;
+    Touche* mim = new Touche(this, QString("O"),QString("Mim"));
+    mim->move(sizeT*nT,10);
+    nT+=1;
+    Touche* fam = new Touche(this, QString("P"),QString("Fam"));
+    fam->move(sizeT*nT,10);
+    nT+=1;
+    Touche* solm = new Touche(this, QString("¨"),QString("Solm"));
+    solm->move(sizeT*nT,10);
+    nT+=1;
+    Touche* lam = new Touche(this, QString("$"),QString("Lam"));
+    lam->move(sizeT*nT,10);
+    nT+=1;
+    Touche* sim = new Touche(this, QString("Entree"),QString("sim"));
+    sim->move(sizeT*nT,10);
 
 
     nT=3;
 
 
-    Touche* domD = new Touche(this, QString("&"),QString("DomD"));
-    domD->black();
-    domD->move(sizeT*nT-sizeT/4,10);
-    nT+=1;
-    Touche* remD = new Touche(this, QString("é"),QString("RémD"));
-    remD->black();
-    remD->move(sizeT*nT-sizeT/4,10);
-    nT+=2;
-    Touche* famD = new Touche(this, QString("'"),QString("FamD"));
-    famD->black();
-    famD->move(sizeT*nT-sizeT/4,10);
-    nT+=1;
-    Touche* solmD = new Touche(this, QString("("),QString("SolmD"));
-    solmD->black();
-    solmD->move(sizeT*nT-sizeT/4,10);
-    nT+=1;
-    Touche* lamD = new Touche(this, QString("-"),QString("LamD"));
-    lamD->black();
-    lamD->move(sizeT*nT-sizeT/4,10);
-    nT+=2;
-
-    Touche* doMD = new Touche(this, QString("_"),QString("DoMD"));
+    Touche* doMD = new Touche(this, QString("&"),QString("DoMD"));
     doMD->black();
     doMD->move(sizeT*nT-sizeT/4,10);
     nT+=1;
-    Touche* reMD = new Touche(this, QString("ç"),QString("RéMD"));
+    Touche* reMD = new Touche(this, QString("é"),QString("RéMD"));
     reMD->black();
     reMD->move(sizeT*nT-sizeT/4,10);
     nT+=2;
-    Touche* faMD = new Touche(this, QString(")"),QString("FaMD"));
+    Touche* faMD = new Touche(this, QString("'"),QString("FaMD"));
     faMD->black();
     faMD->move(sizeT*nT-sizeT/4,10);
     nT+=1;
-    Touche* solMD = new Touche(this, QString("="),QString("SolMD"));
+    Touche* solMD = new Touche(this, QString("("),QString("SolMD"));
     solMD->black();
     solMD->move(sizeT*nT-sizeT/4,10);
     nT+=1;
-    Touche* laMD = new Touche(this, QString("back"),QString("LaMD"));
+    Touche* laMD = new Touche(this, QString("-"),QString("LaMD"));
     laMD->black();
     laMD->move(sizeT*nT-sizeT/4,10);
+    nT+=2;
+
+    Touche* domD = new Touche(this, QString("_"),QString("DomD"));
+    domD->black();
+    domD->move(sizeT*nT-sizeT/4,10);
+    nT+=1;
+    Touche* remD = new Touche(this, QString("ç"),QString("RémD"));
+    remD->black();
+    remD->move(sizeT*nT-sizeT/4,10);
+    nT+=2;
+    Touche* famD = new Touche(this, QString(")"),QString("FamD"));
+    famD->black();
+    famD->move(sizeT*nT-sizeT/4,10);
+    nT+=1;
+    Touche* solmD = new Touche(this, QString("="),QString("SolmD"));
+    solmD->black();
+    solmD->move(sizeT*nT-sizeT/4,10);
+    nT+=1;
+    Touche* lamD = new Touche(this, QString("back"),QString("LamD"));
+    lamD->black();
+    lamD->move(sizeT*nT-sizeT/4,10);
 
 
 
@@ -129,80 +129,80 @@ Piano::Piano(QWidget *parent) :
 
 }
  void Piano::play_dom(){
-     QSound::play("../../../son/dom.wav");
+     QSound::play("../son/dom.wav");
  }
  void Piano::play_rem(){
-     QSound::play("../../../son/rem.wav");
+     QSound::play("../son/rem.wav");
  }
  void Piano::play_mim(){
-     QSound::play("../../../son/mim.wav");
+     QSound::play("../son/mim.wav");
  }
  void Piano::play_fam(){
-     QSound::play("../../../son/fam.wav");
+     QSound::play("../son/fam.wav");
  }
  void Piano::play_solm(){
-     QSound::play("../../../son/solm.wav");
+     QSound::play("../son/solm.wav");
  }
  void Piano::play_lam(){
-     QSound::play("../../../son/lam.wav");
+     QSound::play("../son/lam.wav");
  }
  void Piano::play_sim(){
-     QSound::play("../../../son/sim.wav");
+     QSound::play("../son/sim.wav");
  }
 
 
  void Piano::play_doM(){
-     QSound::play("../../../son/doM.wav");
+     QSound::play("../son/doM.wav");
  }
  void Piano::play_reM(){
-     QSound::play("../../../son/reM.wav");
+     QSound::play("../son/reM.wav");
  }
  void Piano::play_miM(){
-     QSound::play("../../../son/miM.wav");
+     QSound::play("../son/miM.wav");
  }
  void Piano::play_faM(){
-     QSound::play("../../../son/faM.wav");
+     QSound::play("../son/faM.wav");
  }
  void Piano::play_solM(){
-     QSound::play("../../../son/solM.wav");
+     QSound::play("../son/solM.wav");
  }
  void Piano::play_laM(){
-     QSound::play("../../../son/laM.wav");
+     QSound::play("../son/laM.wav");
  }
  void Piano::play_siM(){
-     QSound::play("../../../son/siM.wav");
+     QSound::play("../son/siM.wav");
  }
 
  void Piano::play_domD(){
-     QSound::play("../../../son/domD.wav");
+     QSound::play("../son/domD.wav");
  }
  void Piano::play_remD(){
-     QSound::play("../../../son/remD.wav");
+     QSound::play("../son/remD.wav");
  }
  void Piano::play_famD(){
-     QSound::play("../../../son/famD.wav");
+     QSound::play("../son/famD.wav");
  }
  void Piano::play_solmD(){
-     QSound::play("../../../son/solmD.wav");
+     QSound::play("../son/solmD.wav");
  }
  void Piano::play_lamD(){
-     QSound::play("../../../son/lamD.wav");
+     QSound::play("../son/lamD.wav");
  }
 
  void Piano::play_doMD(){
-     QSound::play("../../../son/doMD.wav");
+     QSound::play("../son/doMD.wav");
  }
  void Piano::play_reMD(){
-     QSound::play("../../../son/reMD.wav");
+     QSound::play("../son/reMD.wav");
  }
  void Piano::play_faMD(){
-     QSound::play("../../../son/faMD.wav");
+     QSound::play("../son/faMD.wav");
  }
  void Piano::play_solMD(){
-     QSound::play("../../../son/solMD.wav");
+     QSound::play("../son/solMD.wav");
  }
  void Piano::play_laMD(){
-     QSound::play("../../../son/laMD.wav");
+     QSound::play("../son/laMD.wav");
  }
 
 
