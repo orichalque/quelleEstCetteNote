@@ -6,6 +6,7 @@
 #include <iostream>
 #include <QDebug>
 #include <cmath>
+#include "piano.h"
 
 using namespace std;
 
@@ -14,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    Piano *p = new Piano(this);
 
 }
 
@@ -21,6 +23,7 @@ void MainWindow::paintEvent(QPaintEvent * event)
 {
     QMainWindow::paintEvent(event);
     QPainter p(this);
+
 
     int w = width();
     int h = height();

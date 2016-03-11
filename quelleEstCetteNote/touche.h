@@ -6,10 +6,15 @@ class Touche :/*public  QWidget,*/ public QPushButton
 {
 public:
     Touche(QWidget *parent, QString  raccourci=QStringLiteral("rac"), QString note=QStringLiteral("note"));
+    QString getNote();
+    //bool hitButton(const QPoint & pos) const;
+    void black();
+
+private:
+    QString racc;
+    QString note;
 
 public slots:
-    void on_clicked();
-    void on_released();
 };
 
 #endif // TOUCHE_H
