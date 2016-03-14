@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 4.8.6
+** Created by: Qt User Interface Compiler version 5.4.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,42 +10,48 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QHeaderView>
-#include <QtGui/QMainWindow>
-#include <QtGui/QMenuBar>
-#include <QtGui/QStatusBar>
-#include <QtGui/QToolBar>
-#include <QtGui/QWidget>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QStatusBar>
+#include <QtWidgets/QToolBar>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_MainWindow
 {
 public:
+    QWidget *centralWidget;
+    QPushButton *pushButton;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
-    QWidget *centralWidget;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
-            MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
+            MainWindow->setObjectName(QStringLiteral("MainWindow"));
         MainWindow->resize(400, 300);
+        centralWidget = new QWidget(MainWindow);
+        centralWidget->setObjectName(QStringLiteral("centralWidget"));
+        pushButton = new QPushButton(centralWidget);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setGeometry(QRect(210, 140, 103, 27));
+        MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
-        menuBar->setObjectName(QString::fromUtf8("menuBar"));
+        menuBar->setObjectName(QStringLiteral("menuBar"));
+        menuBar->setGeometry(QRect(0, 0, 400, 28));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
-        mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
-        MainWindow->addToolBar(mainToolBar);
-        centralWidget = new QWidget(MainWindow);
-        centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-        MainWindow->setCentralWidget(centralWidget);
+        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
+        MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
         statusBar = new QStatusBar(MainWindow);
-        statusBar->setObjectName(QString::fromUtf8("statusBar"));
+        statusBar->setObjectName(QStringLiteral("statusBar"));
         MainWindow->setStatusBar(statusBar);
 
         retranslateUi(MainWindow);
@@ -55,7 +61,8 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
+        pushButton->setText(QApplication::translate("MainWindow", "PushButton", 0));
     } // retranslateUi
 
 };

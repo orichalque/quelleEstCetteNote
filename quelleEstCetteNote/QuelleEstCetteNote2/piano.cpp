@@ -2,96 +2,97 @@
 Piano::Piano(QWidget *parent) :
     QWidget(parent)
 {
-
+    setFixedSize(800, 310);
     Touche* doM = new Touche(this, QString("tab"),QString("DoM"));
     int sizeT= doM->width();
-    int nT =2;
-    doM->move(sizeT*nT,10);
+    int hauteur = 100;
+    int nT =9;
+    doM->move(sizeT*nT,hauteur);
     nT+=1;
     Touche* reM = new Touche(this, QString("A"),QString("RéM"));
-    reM->move(sizeT*nT,10);
+    reM->move(sizeT*nT,hauteur);
     nT+=1;
     Touche* miM = new Touche(this, QString("Z"),QString("MiM"));
-    miM->move(sizeT*nT,10);
+    miM->move(sizeT*nT,hauteur);
     nT+=1;
     Touche* faM = new Touche(this, QString("E"),QString("FaM"));
-    faM->move(sizeT*nT,10);
+    faM->move(sizeT*nT,hauteur);
     nT+=1;
     Touche* solM = new Touche(this, QString("R"),QString("SolM"));
-    solM->move(sizeT*nT,10);
+    solM->move(sizeT*nT,hauteur);
     nT+=1;
     Touche* laM = new Touche(this, QString("T"),QString("LaM"));
-    laM->move(sizeT*nT,10);
+    laM->move(sizeT*nT,hauteur);
     nT+=1;
     Touche* siM = new Touche(this, QString("Y"),QString("siM"));
-    siM->move(sizeT*nT,10);
+    siM->move(sizeT*nT,hauteur);
     nT+=1;
 
     Touche* dom = new Touche(this, QString("U"),QString("Dom"));
-    dom->move(sizeT*nT,10);
+    dom->move(sizeT*nT,hauteur);
     nT+=1;
     Touche* rem = new Touche(this, QString("I"),QString("Rém"));
-    rem->move(sizeT*nT,10);
+    rem->move(sizeT*nT,hauteur);
     nT+=1;
     Touche* mim = new Touche(this, QString("O"),QString("Mim"));
-    mim->move(sizeT*nT,10);
+    mim->move(sizeT*nT,hauteur);
     nT+=1;
     Touche* fam = new Touche(this, QString("P"),QString("Fam"));
-    fam->move(sizeT*nT,10);
+    fam->move(sizeT*nT,hauteur);
     nT+=1;
-    Touche* solm = new Touche(this, QString("¨"),QString("Solm"));
-    solm->move(sizeT*nT,10);
+    Touche* solm = new Touche(this, QString(/*"dead_circumflex"*/"16781906"),QString("Solm"));
+    solm->move(sizeT*nT,hauteur);
     nT+=1;
     Touche* lam = new Touche(this, QString("$"),QString("Lam"));
-    lam->move(sizeT*nT,10);
+    lam->move(sizeT*nT,hauteur);
     nT+=1;
-    Touche* sim = new Touche(this, QString("Entree"),QString("sim"));
-    sim->move(sizeT*nT,10);
+    Touche* sim = new Touche(this, QString("Return"),QString("sim"));
+    sim->move(sizeT*nT,hauteur);
 
 
-    nT=3;
+    nT=10;
 
 
     Touche* doMD = new Touche(this, QString("&"),QString("DoMD"));
     doMD->black();
-    doMD->move(sizeT*nT-sizeT/4,10);
+    doMD->move(sizeT*nT-sizeT/4,hauteur);
     nT+=1;
     Touche* reMD = new Touche(this, QString("é"),QString("RéMD"));
     reMD->black();
-    reMD->move(sizeT*nT-sizeT/4,10);
+    reMD->move(sizeT*nT-sizeT/4,hauteur);
     nT+=2;
     Touche* faMD = new Touche(this, QString("'"),QString("FaMD"));
     faMD->black();
-    faMD->move(sizeT*nT-sizeT/4,10);
+    faMD->move(sizeT*nT-sizeT/4,hauteur);
     nT+=1;
     Touche* solMD = new Touche(this, QString("("),QString("SolMD"));
     solMD->black();
-    solMD->move(sizeT*nT-sizeT/4,10);
+    solMD->move(sizeT*nT-sizeT/4,hauteur);
     nT+=1;
     Touche* laMD = new Touche(this, QString("-"),QString("LaMD"));
     laMD->black();
-    laMD->move(sizeT*nT-sizeT/4,10);
+    laMD->move(sizeT*nT-sizeT/4,hauteur);
     nT+=2;
 
     Touche* domD = new Touche(this, QString("_"),QString("DomD"));
     domD->black();
-    domD->move(sizeT*nT-sizeT/4,10);
+    domD->move(sizeT*nT-sizeT/4,hauteur);
     nT+=1;
     Touche* remD = new Touche(this, QString("ç"),QString("RémD"));
     remD->black();
-    remD->move(sizeT*nT-sizeT/4,10);
+    remD->move(sizeT*nT-sizeT/4,hauteur);
     nT+=2;
     Touche* famD = new Touche(this, QString(")"),QString("FamD"));
     famD->black();
-    famD->move(sizeT*nT-sizeT/4,10);
+    famD->move(sizeT*nT-sizeT/4,hauteur);
     nT+=1;
     Touche* solmD = new Touche(this, QString("="),QString("SolmD"));
     solmD->black();
-    solmD->move(sizeT*nT-sizeT/4,10);
+    solmD->move(sizeT*nT-sizeT/4,hauteur);
     nT+=1;
-    Touche* lamD = new Touche(this, QString("back"),QString("LamD"));
+    Touche* lamD = new Touche(this, QString("Backspace"),QString("LamD"));
     lamD->black();
-    lamD->move(sizeT*nT-sizeT/4,10);
+    lamD->move(sizeT*nT-sizeT/4,hauteur);
 
 
 

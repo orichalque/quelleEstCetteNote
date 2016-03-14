@@ -18,8 +18,8 @@ int main(int argc, char *argv[])
     Portee *po = new Portee(&w);
     QHBoxLayout qhblupper;
 
-    pi -> setFixedSize(1000, 300);
-    po -> setFixedSize(1000, 300);
+   /* pi -> setFixedSize(1000, 300);
+    po -> setFixedSize(1000, 300);*/
     QVBoxLayout qvbox;
     qvbox.addWidget(po);
     qvbox.addWidget(pi);

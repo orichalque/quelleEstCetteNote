@@ -2,25 +2,33 @@
 #include<QMessageBox>
 using namespace std;
 Touche::Touche(QWidget *parent, QString  raccourci, QString note):QPushButton(QString(""),parent){
-
-    int w = parent->width();
+    setText(raccourci);
     int h = parent->height();
     this->racc = raccourci;
     this->note = note;
-    this->QPushButton::setStyleSheet("background-color: rgb(255, 255, 255);");
     QString tooltip(""+note +": raccourci -> "+ raccourci);
     this->QPushButton::setToolTip(tooltip);
     setShortcut(raccourci);
     resize(h/12,h/3);
     setFocusPolicy(Qt::StrongFocus);
 
+        setStyleSheet("background-color: qlineargradient(spread:reflect, x1:0, y1:0.995, x2:0, y2:0, stop:0 rgba(221, 221, 221, 255), stop:1 rgba(255, 255, 255, 255));"
+        "font: 6px;"
+    );
 
 }
 
 
 void Touche::black(){
     resize(2*width()/3,2*height()/3);
-    setStyleSheet("background-color: rgb(0, 0, 0);");
+    setStyleSheet("background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(182, 182, 182, 255), stop:0.564576 rgba(0, 0, 0, 255));"
+                    "font: bold;"
+                  "border-style: outset;"
+                  "border-color: white;"
+                  "font-size: 6px;"
+                  "border-bottom-right-radius: 3px;"
+                  "border-bottom-left-radius: 3px;"
+                  );
 }
 
 

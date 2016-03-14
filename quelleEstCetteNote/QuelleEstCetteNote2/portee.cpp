@@ -15,7 +15,7 @@ Portee::Portee()
 Portee::Portee(QWidget *parent) :
     QWidget(parent)
 {
-
+    setFixedSize(800, 360);
 }
 
 void Portee::paintEvent(QPaintEvent *event){
