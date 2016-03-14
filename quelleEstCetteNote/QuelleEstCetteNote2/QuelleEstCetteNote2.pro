@@ -7,17 +7,23 @@
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-
+QT+=multimedia
 TARGET = QuelleEstCetteNote2
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    note.cpp
+    note.cpp \
+    piano.cpp \
+    touche.cpp \
+    portee.cpp
 
 HEADERS  += mainwindow.h \
-    note.h
+    note.h \
+    piano.h \
+    touche.h \
+    portee.h
 
 FORMS    += mainwindow.ui
 

@@ -51,7 +51,7 @@ void note::correct(QPainter *p){
 
 void note::correctAll(std::vector<note> notes, QPainter *p){
     for (auto n : notes){
-        p->setPen(Qt::Pen);
+        //p->setPen(Qt::Pen);
         n.correct(p);
         //std::this_thread::sleep_for(std::chrono::milliseconds(250));
     }

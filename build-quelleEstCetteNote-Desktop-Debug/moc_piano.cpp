@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'piano.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.4.2)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.2.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,7 +12,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'piano.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.4.2. It"
+#error "This file was generated using the moc from 5.2.1. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -20,42 +20,41 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_Piano_t {
     QByteArrayData data[26];
-    char stringdata[237];
+    char stringdata[238];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_Piano_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData)) \
+    offsetof(qt_meta_stringdata_Piano_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData) \
     )
 static const qt_meta_stringdata_Piano_t qt_meta_stringdata_Piano = {
     {
-QT_MOC_LITERAL(0, 0, 5), // "Piano"
-QT_MOC_LITERAL(1, 6, 8), // "play_dom"
-QT_MOC_LITERAL(2, 15, 0), // ""
-QT_MOC_LITERAL(3, 16, 8), // "play_rem"
-QT_MOC_LITERAL(4, 25, 8), // "play_mim"
-QT_MOC_LITERAL(5, 34, 8), // "play_fam"
-QT_MOC_LITERAL(6, 43, 9), // "play_solm"
-QT_MOC_LITERAL(7, 53, 8), // "play_lam"
-QT_MOC_LITERAL(8, 62, 8), // "play_sim"
-QT_MOC_LITERAL(9, 71, 8), // "play_doM"
-QT_MOC_LITERAL(10, 80, 8), // "play_reM"
-QT_MOC_LITERAL(11, 89, 8), // "play_miM"
-QT_MOC_LITERAL(12, 98, 8), // "play_faM"
-QT_MOC_LITERAL(13, 107, 9), // "play_solM"
-QT_MOC_LITERAL(14, 117, 8), // "play_laM"
-QT_MOC_LITERAL(15, 126, 8), // "play_siM"
-QT_MOC_LITERAL(16, 135, 9), // "play_domD"
-QT_MOC_LITERAL(17, 145, 9), // "play_remD"
-QT_MOC_LITERAL(18, 155, 9), // "play_famD"
-QT_MOC_LITERAL(19, 165, 10), // "play_solmD"
-QT_MOC_LITERAL(20, 176, 9), // "play_lamD"
-QT_MOC_LITERAL(21, 186, 9), // "play_doMD"
-QT_MOC_LITERAL(22, 196, 9), // "play_reMD"
-QT_MOC_LITERAL(23, 206, 9), // "play_faMD"
-QT_MOC_LITERAL(24, 216, 10), // "play_solMD"
-QT_MOC_LITERAL(25, 227, 9) // "play_laMD"
-
+QT_MOC_LITERAL(0, 0, 5),
+QT_MOC_LITERAL(1, 6, 8),
+QT_MOC_LITERAL(2, 15, 0),
+QT_MOC_LITERAL(3, 16, 8),
+QT_MOC_LITERAL(4, 25, 8),
+QT_MOC_LITERAL(5, 34, 8),
+QT_MOC_LITERAL(6, 43, 9),
+QT_MOC_LITERAL(7, 53, 8),
+QT_MOC_LITERAL(8, 62, 8),
+QT_MOC_LITERAL(9, 71, 8),
+QT_MOC_LITERAL(10, 80, 8),
+QT_MOC_LITERAL(11, 89, 8),
+QT_MOC_LITERAL(12, 98, 8),
+QT_MOC_LITERAL(13, 107, 9),
+QT_MOC_LITERAL(14, 117, 8),
+QT_MOC_LITERAL(15, 126, 8),
+QT_MOC_LITERAL(16, 135, 9),
+QT_MOC_LITERAL(17, 145, 9),
+QT_MOC_LITERAL(18, 155, 9),
+QT_MOC_LITERAL(19, 165, 10),
+QT_MOC_LITERAL(20, 176, 9),
+QT_MOC_LITERAL(21, 186, 9),
+QT_MOC_LITERAL(22, 196, 9),
+QT_MOC_LITERAL(23, 206, 9),
+QT_MOC_LITERAL(24, 216, 10),
+QT_MOC_LITERAL(25, 227, 9)
     },
     "Piano\0play_dom\0\0play_rem\0play_mim\0"
     "play_fam\0play_solm\0play_lam\0play_sim\0"
@@ -63,7 +62,7 @@ QT_MOC_LITERAL(25, 227, 9) // "play_laMD"
     "play_solM\0play_laM\0play_siM\0play_domD\0"
     "play_remD\0play_famD\0play_solmD\0play_lamD\0"
     "play_doMD\0play_reMD\0play_faMD\0play_solMD\0"
-    "play_laMD"
+    "play_laMD\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -81,30 +80,30 @@ static const uint qt_meta_data_Piano[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,  134,    2, 0x0a /* Public */,
-       3,    0,  135,    2, 0x0a /* Public */,
-       4,    0,  136,    2, 0x0a /* Public */,
-       5,    0,  137,    2, 0x0a /* Public */,
-       6,    0,  138,    2, 0x0a /* Public */,
-       7,    0,  139,    2, 0x0a /* Public */,
-       8,    0,  140,    2, 0x0a /* Public */,
-       9,    0,  141,    2, 0x0a /* Public */,
-      10,    0,  142,    2, 0x0a /* Public */,
-      11,    0,  143,    2, 0x0a /* Public */,
-      12,    0,  144,    2, 0x0a /* Public */,
-      13,    0,  145,    2, 0x0a /* Public */,
-      14,    0,  146,    2, 0x0a /* Public */,
-      15,    0,  147,    2, 0x0a /* Public */,
-      16,    0,  148,    2, 0x0a /* Public */,
-      17,    0,  149,    2, 0x0a /* Public */,
-      18,    0,  150,    2, 0x0a /* Public */,
-      19,    0,  151,    2, 0x0a /* Public */,
-      20,    0,  152,    2, 0x0a /* Public */,
-      21,    0,  153,    2, 0x0a /* Public */,
-      22,    0,  154,    2, 0x0a /* Public */,
-      23,    0,  155,    2, 0x0a /* Public */,
-      24,    0,  156,    2, 0x0a /* Public */,
-      25,    0,  157,    2, 0x0a /* Public */,
+       1,    0,  134,    2, 0x0a,
+       3,    0,  135,    2, 0x0a,
+       4,    0,  136,    2, 0x0a,
+       5,    0,  137,    2, 0x0a,
+       6,    0,  138,    2, 0x0a,
+       7,    0,  139,    2, 0x0a,
+       8,    0,  140,    2, 0x0a,
+       9,    0,  141,    2, 0x0a,
+      10,    0,  142,    2, 0x0a,
+      11,    0,  143,    2, 0x0a,
+      12,    0,  144,    2, 0x0a,
+      13,    0,  145,    2, 0x0a,
+      14,    0,  146,    2, 0x0a,
+      15,    0,  147,    2, 0x0a,
+      16,    0,  148,    2, 0x0a,
+      17,    0,  149,    2, 0x0a,
+      18,    0,  150,    2, 0x0a,
+      19,    0,  151,    2, 0x0a,
+      20,    0,  152,    2, 0x0a,
+      21,    0,  153,    2, 0x0a,
+      22,    0,  154,    2, 0x0a,
+      23,    0,  155,    2, 0x0a,
+      24,    0,  156,    2, 0x0a,
+      25,    0,  157,    2, 0x0a,
 
  // slots: parameters
     QMetaType::Void,
@@ -172,7 +171,7 @@ void Piano::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
 
 const QMetaObject Piano::staticMetaObject = {
     { &QWidget::staticMetaObject, qt_meta_stringdata_Piano.data,
-      qt_meta_data_Piano,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
+      qt_meta_data_Piano,  qt_static_metacall, 0, 0}
 };
 
 
@@ -183,7 +182,7 @@ const QMetaObject *Piano::metaObject() const
 
 void *Piano::qt_metacast(const char *_clname)
 {
-    if (!_clname) return Q_NULLPTR;
+    if (!_clname) return 0;
     if (!strcmp(_clname, qt_meta_stringdata_Piano.stringdata))
         return static_cast<void*>(const_cast< Piano*>(this));
     return QWidget::qt_metacast(_clname);

@@ -2,5 +2,29 @@
     <qresource prefix="/new/prefix1">
         <file>clef.jpg</file>
         <file>clef.png</file>
+        <file>son/dom.wav</file>
+        <file>son/doM.wav</file>
+        <file>son/domD.wav</file>
+        <file>son/doMD.wav</file>
+        <file>son/fam.wav</file>
+        <file>son/faM.wav</file>
+        <file>son/famD.wav</file>
+        <file>son/faMD.wav</file>
+        <file>son/lam.wav</file>
+        <file>son/laM.wav</file>
+        <file>son/lamD.wav</file>
+        <file>son/laMD.wav</file>
+        <file>son/mim.wav</file>
+        <file>son/miM.wav</file>
+        <file>son/rem.wav</file>
+        <file>son/reM.wav</file>
+        <file>son/remD.wav</file>
+        <file>son/reMD.wav</file>
+        <file>son/sim.wav</file>
+        <file>son/siM.wav</file>
+        <file>son/solm.wav</file>
+        <file>son/solM.wav</file>
+        <file>son/solmD.wav</file>
+        <file>son/solMD.wav</file>
     </qresource>
 </RCC>
