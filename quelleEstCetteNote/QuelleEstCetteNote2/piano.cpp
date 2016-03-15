@@ -1,5 +1,7 @@
 #include "piano.h"
 #include "log.cpp"
+
+char action[50]= "appuie sur touche";
 Piano::Piano(QWidget *parent) :
     QWidget(parent)
 {
@@ -132,82 +134,127 @@ Piano::Piano(QWidget *parent) :
 }
  void Piano::play_dom(){
      QSound::play(":/new/prefix1/son/dom.wav");
-     char action[50]= "appuie sur touche do";
-     char action2[50]=  "mineur";
-     log(action, action2);
+     char action2[50]=  "do mineur";
+     log(action,action2);
  }
  void Piano::play_rem(){
      QSound::play(":/new/prefix1/son/rem.wav");
+     char action2[50]=  "re mineur";
+     log(action,action2);
  }
  void Piano::play_mim(){
      QSound::play(":/new/prefix1/son/mim.wav");
+     char action2[50]=  "mi mineur";
+     log(action,action2);
  }
  void Piano::play_fam(){
      QSound::play(":/new/prefix1/son/fam.wav");
+     char action2[50]=  "fa mineur";
+     log(action,action2);
  }
  void Piano::play_solm(){
      QSound::play(":/new/prefix1/son/solm.wav");
+     char action2[50]=  "sol mineur";
+     log(action,action2);
  }
  void Piano::play_lam(){
      QSound::play(":/new/prefix1/son/lam.wav");
+     char action2[50]=  "la mineur";
+     log(action,action2);
  }
  void Piano::play_sim(){
      QSound::play(":/new/prefix1/son/sim.wav");
+     char action2[50]=  "si mineur";
+     log(action,action2);
  }
 
 
  void Piano::play_doM(){
      QSound::play(":/new/prefix1/son/doM.wav");
+     char action2[50]=  "do Majeur";
+     log(action,action2);
  }
  void Piano::play_reM(){
      QSound::play(":/new/prefix1/son/reM.wav");
+     char action2[50]=  "re Majeur";
+     log(action,action2);
  }
  void Piano::play_miM(){
      QSound::play(":/new/prefix1/son/miM.wav");
+     char action2[50]=  "mi Majeur";
+     log(action,action2);
  }
  void Piano::play_faM(){
      QSound::play(":/new/prefix1/son/faM.wav");
+     char action2[50]=  "fa Majeur";
+     log(action,action2);
  }
  void Piano::play_solM(){
      QSound::play(":/new/prefix1/son/solM.wav");
+     char action2[50]=  "sol Majeur";
+     log(action,action2);
  }
  void Piano::play_laM(){
      QSound::play(":/new/prefix1/son/laM.wav");
+     char action2[50]=  "la Majeur";
+     log(action,action2);
  }
  void Piano::play_siM(){
      QSound::play(":/new/prefix1/son/siM.wav");
+     char action2[50]=  "si Majeur";
+     log(action,action2);
  }
 
  void Piano::play_domD(){
      QSound::play(":/new/prefix1/son/domD.wav");
+     char action2[50]=  "do# mineur";
+     log(action,action2);
  }
  void Piano::play_remD(){
      QSound::play(":/new/prefix1/son/remD.wav");
+     char action2[50]=  "re# mineur";
+     log(action,action2);
  }
  void Piano::play_famD(){
      QSound::play(":/new/prefix1/son/famD.wav");
+     char action2[50]=  "fa# mineur";
+     log(action,action2);
  }
  void Piano::play_solmD(){
      QSound::play(":/new/prefix1/son/solmD.wav");
+     char action2[50]=  "sol# mineur";
+     log(action,action2);
  }
  void Piano::play_lamD(){
      QSound::play(":/new/prefix1/son/lamD.wav");
+     char action2[50]=  "la# mineur";
+     log(action,action2);
  }
 
  void Piano::play_doMD(){
      QSound::play(":/new/prefix1/son/doMD.wav");
+     char action2[50]=  "do# Majeur";
+     log(action,action2);
  }
  void Piano::play_reMD(){
      QSound::play(":/new/prefix1/son/reMD.wav");
+     char action2[50]=  "re# Majeur";
+     log(action,action2);
  }
  void Piano::play_faMD(){
      QSound::play(":/new/prefix1/son/faMD.wav");
+     char action2[50]=  "fa# Majeur";
+     log(action,action2);
  }
  void Piano::play_solMD(){
      QSound::play(":/new/prefix1/son/solMD.wav");
+     char action2[50]=  "sol# Majeur";
+     log(action,action2);
  }
  void Piano::play_laMD(){
      QSound::play(":/new/prefix1/son/laMD.wav");
+     char action2[50]=  "la# Majeur";
+     log(action,action2);
  }
 
 

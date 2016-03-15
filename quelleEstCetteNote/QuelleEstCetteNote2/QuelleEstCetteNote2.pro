@@ -18,7 +18,8 @@ SOURCES += main.cpp\
     piano.cpp \
     touche.cpp \
     portee.cpp \
-    log.cpp
+    log.cpp \
+    log2.cpp
 
 HEADERS  += mainwindow.h \
     note.h \

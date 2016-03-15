@@ -53,7 +53,8 @@ SOURCES       = ../QuelleEstCetteNote2/main.cpp \
 		../QuelleEstCetteNote2/note.cpp \
 		../QuelleEstCetteNote2/piano.cpp \
 		../QuelleEstCetteNote2/touche.cpp \
-		../QuelleEstCetteNote2/portee.cpp qrc_res.cpp \
+		../QuelleEstCetteNote2/portee.cpp \
+		../QuelleEstCetteNote2/log2.cpp qrc_res.cpp \
 		moc_mainwindow.cpp \
 		moc_piano.cpp
 OBJECTS       = main.o \
@@ -62,6 +63,7 @@ OBJECTS       = main.o \
 		piano.o \
 		touche.o \
 		portee.o \
+		log2.o \
 		qrc_res.o \
 		moc_mainwindow.o \
 		moc_piano.o
@@ -131,7 +133,8 @@ DIST          = ../QuelleEstCetteNote2/logtouches.log \
 		../QuelleEstCetteNote2/note.cpp \
 		../QuelleEstCetteNote2/piano.cpp \
 		../QuelleEstCetteNote2/touche.cpp \
-		../QuelleEstCetteNote2/portee.cpp
+		../QuelleEstCetteNote2/portee.cpp \
+		../QuelleEstCetteNote2/log2.cpp
 QMAKE_TARGET  = QuelleEstCetteNote2
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = QuelleEstCetteNote2
@@ -305,7 +308,7 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../QuelleEstCetteNote2/res.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents ../QuelleEstCetteNote2/mainwindow.h ../QuelleEstCetteNote2/note.h ../QuelleEstCetteNote2/piano.h ../QuelleEstCetteNote2/touche.h ../QuelleEstCetteNote2/portee.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../QuelleEstCetteNote2/main.cpp ../QuelleEstCetteNote2/mainwindow.cpp ../QuelleEstCetteNote2/note.cpp ../QuelleEstCetteNote2/piano.cpp ../QuelleEstCetteNote2/touche.cpp ../QuelleEstCetteNote2/portee.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../QuelleEstCetteNote2/main.cpp ../QuelleEstCetteNote2/mainwindow.cpp ../QuelleEstCetteNote2/note.cpp ../QuelleEstCetteNote2/piano.cpp ../QuelleEstCetteNote2/touche.cpp ../QuelleEstCetteNote2/portee.cpp ../QuelleEstCetteNote2/log2.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../QuelleEstCetteNote2/mainwindow.ui $(DISTDIR)/
 
 
@@ -412,6 +415,9 @@ touche.o: ../QuelleEstCetteNote2/touche.cpp ../QuelleEstCetteNote2/touche.h
 portee.o: ../QuelleEstCetteNote2/portee.cpp ../QuelleEstCetteNote2/portee.h \
 		../QuelleEstCetteNote2/note.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o portee.o ../QuelleEstCetteNote2/portee.cpp
+
+log2.o: ../QuelleEstCetteNote2/log2.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o log2.o ../QuelleEstCetteNote2/log2.cpp
 
 qrc_res.o: qrc_res.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_res.o qrc_res.cpp
