@@ -1,4 +1,5 @@
 #include "piano.h"
+#include "log.cpp"
 Piano::Piano(QWidget *parent) :
     QWidget(parent)
 {
@@ -131,6 +132,9 @@ Piano::Piano(QWidget *parent) :
 }
  void Piano::play_dom(){
      QSound::play(":/new/prefix1/son/dom.wav");
+     char action[50]= "appuie sur touche do";
+     char action2[50]=  "mineur";
+     log(action, action2);
  }
  void Piano::play_rem(){
      QSound::play(":/new/prefix1/son/rem.wav");

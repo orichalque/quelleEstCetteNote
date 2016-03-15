@@ -17,7 +17,8 @@ SOURCES += main.cpp\
     note.cpp \
     piano.cpp \
     touche.cpp \
-    portee.cpp
+    portee.cpp \
+    log.cpp
 
 HEADERS  += mainwindow.h \
     note.h \
@@ -31,3 +32,6 @@ RESOURCES += \
     res.qrc
 
 QMAKE_CXXFLAGS += -std=c++11
+
+DISTFILES += \
+    logtouches.log

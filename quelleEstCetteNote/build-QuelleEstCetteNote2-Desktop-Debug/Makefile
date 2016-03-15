@@ -65,7 +65,8 @@ OBJECTS       = main.o \
 		qrc_res.o \
 		moc_mainwindow.o \
 		moc_piano.o
-DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
+DIST          = ../QuelleEstCetteNote2/logtouches.log \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/shell-unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/linux.conf \
@@ -401,7 +402,8 @@ note.o: ../QuelleEstCetteNote2/note.cpp ../QuelleEstCetteNote2/note.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o note.o ../QuelleEstCetteNote2/note.cpp
 
 piano.o: ../QuelleEstCetteNote2/piano.cpp ../QuelleEstCetteNote2/piano.h \
-		../QuelleEstCetteNote2/touche.h
+		../QuelleEstCetteNote2/touche.h \
+		../QuelleEstCetteNote2/log.cpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o piano.o ../QuelleEstCetteNote2/piano.cpp
 
 touche.o: ../QuelleEstCetteNote2/touche.cpp ../QuelleEstCetteNote2/touche.h
