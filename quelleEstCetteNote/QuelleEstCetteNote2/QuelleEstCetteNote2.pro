@@ -25,7 +25,6 @@ HEADERS  += mainwindow.h \
     piano.h \
     touche.h \
     portee.h \
-    partiebasse.h
 
 FORMS    += mainwindow.ui
 
