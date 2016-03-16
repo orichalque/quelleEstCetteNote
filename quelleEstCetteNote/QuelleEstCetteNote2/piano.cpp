@@ -14,99 +14,109 @@ Piano::Piano(QWidget *parent) :
     notes = new QVector<Touche*>();
     setFixedSize(800, 310);
 
-    QPushButton *raccButt= new QPushButton(QString("raccourcis"),this);
-    QPushButton *noteNames = new QPushButton(QString("do ré mi ..."),this);
+    QPushButton *raccButt= new QPushButton(QString(""),this);
+    QPushButton *noteNames = new QPushButton(QString(""),this);
 
-    Touche* doM = new Touche(this, QString("tab"),QString("DoM"));
+    Touche* doM = new Touche(this, QString("tab"),QString("Do"));
     int sizeT= doM->width();
     int hauteur = 100;
     int nT =3;
     raccButt->move(0,hauteur+50);
-    noteNames->move(700,hauteur +50);
+    raccButt->setFixedSize(140,50);
+    raccButt->setStyleSheet("border-image: url(:/img/clavier.svg.png);"
+                            );
+
+
+
+    noteNames->move(660,hauteur +50);
+    noteNames->setFixedSize(140,50);
+    noteNames->setStyleSheet("border-image: url(:/img/doremi);"
+                            "border-width: 2px;");
+
     doM->move(sizeT*nT,hauteur);
     nT+=1;
-    Touche* reM = new Touche(this, QString("A"),QString("RéM"));
+    Touche* reM = new Touche(this, QString("A"),QString("Ré"));
     reM->move(sizeT*nT,hauteur);
     nT+=1;
-    Touche* miM = new Touche(this, QString("Z"),QString("MiM"));
+    Touche* miM = new Touche(this, QString("Z"),QString("Mi"));
     miM->move(sizeT*nT,hauteur);
     nT+=1;
-    Touche* faM = new Touche(this, QString("E"),QString("FaM"));
+    Touche* faM = new Touche(this, QString("E"),QString("Fa"));
     faM->move(sizeT*nT,hauteur);
     nT+=1;
-    Touche* solM = new Touche(this, QString("R"),QString("SolM"));
+    Touche* solM = new Touche(this, QString("R"),QString("Sol"));
     solM->move(sizeT*nT,hauteur);
     nT+=1;
-    Touche* laM = new Touche(this, QString("T"),QString("LaM"));
+    Touche* laM = new Touche(this, QString("T"),QString("La"));
     laM->move(sizeT*nT,hauteur);
     nT+=1;
-    Touche* siM = new Touche(this, QString("Y"),QString("siM"));
+    Touche* siM = new Touche(this, QString("Y"),QString("si"));
     siM->move(sizeT*nT,hauteur);
     nT+=1;
 
-    Touche* dom = new Touche(this, QString("U"),QString("Dom"));
+    Touche* dom = new Touche(this, QString("U"),QString("Do"));
     dom->move(sizeT*nT,hauteur);
     nT+=1;
-    Touche* rem = new Touche(this, QString("I"),QString("Rém"));
+    Touche* rem = new Touche(this, QString("I"),QString("Ré"));
     rem->move(sizeT*nT,hauteur);
     nT+=1;
-    Touche* mim = new Touche(this, QString("O"),QString("Mim"));
+    Touche* mim = new Touche(this, QString("O"),QString("Mi"));
     mim->move(sizeT*nT,hauteur);
     nT+=1;
-    Touche* fam = new Touche(this, QString("P"),QString("Fam"));
+    Touche* fam = new Touche(this, QString("P"),QString("Fa"));
     fam->move(sizeT*nT,hauteur);
     nT+=1;
-    Touche* solm = new Touche(this, QString(/*"dead_circumflex"*/"16781906"),QString("Solm"));
+    Touche* solm = new Touche(this, QString(/*"dead_circumflex"*/"16781906"),QString("Sol"));
     solm->move(sizeT*nT,hauteur);
     nT+=1;
-    Touche* lam = new Touche(this, QString("$"),QString("Lam"));
+    Touche* lam = new Touche(this, QString("$"),QString("La"));
     lam->move(sizeT*nT,hauteur);
     nT+=1;
-    Touche* sim = new Touche(this, QString("Return"),QString("sim"));
+    Touche* sim = new Touche(this, QString("Return"),QString("si"));
     sim->move(sizeT*nT,hauteur);
 
 
     nT=4;
 
 
-    Touche* doMD = new Touche(this, QString("&"),QString("DoMD"));
+    Touche* doMD = new Touche(this, QString("&"),QString("Do#"));
     doMD->black();
     doMD->move(sizeT*nT-sizeT/4,hauteur);
     nT+=1;
-    Touche* reMD = new Touche(this, QString("é"),QString("RéMD"));
+    Touche* reMD = new Touche(this, QString("é"),QString("Ré#"));
     reMD->black();
     reMD->move(sizeT*nT-sizeT/4,hauteur);
     nT+=2;
-    Touche* faMD = new Touche(this, QString("'"),QString("FaMD"));
+    Touche* faMD = new Touche(this, QString("'"),QString("Fa#"));
     faMD->black();
     faMD->move(sizeT*nT-sizeT/4,hauteur);
     nT+=1;
-    Touche* solMD = new Touche(this, QString("("),QString("SolMD"));
+    Touche* solMD = new Touche(this, QString("("),QString("Sol#"));
     solMD->black();
     solMD->move(sizeT*nT-sizeT/4,hauteur);
     nT+=1;
-    Touche* laMD = new Touche(this, QString("-"),QString("LaMD"));
+    Touche* laMD = new Touche(this, QString("-"),QString("La#"));
     laMD->black();
     laMD->move(sizeT*nT-sizeT/4,hauteur);
     nT+=2;
 
-    Touche* domD = new Touche(this, QString("_"),QString("DomD"));
+    Touche* domD = new Touche(this, QString("_"),QString("Do#"));
     domD->black();
     domD->move(sizeT*nT-sizeT/4,hauteur);
     nT+=1;
-    Touche* remD = new Touche(this, QString("ç"),QString("RémD"));
+    Touche* remD = new Touche(this, QString("ç"),QString("Ré#"));
     remD->black();
     remD->move(sizeT*nT-sizeT/4,hauteur);
     nT+=2;
-    Touche* famD = new Touche(this, QString(")"),QString("FamD"));
+    Touche* famD = new Touche(this, QString(")"),QString("Fa#"));
     famD->black();
     famD->move(sizeT*nT-sizeT/4,hauteur);
     nT+=1;
-    Touche* solmD = new Touche(this, QString("="),QString("SolmD"));
+    Touche* solmD = new Touche(this, QString("="),QString("Sol#"));
     solmD->black();
     solmD->move(sizeT*nT-sizeT/4,hauteur);
     nT+=1;
-    Touche* lamD = new Touche(this, QString("Backspace"),QString("LamD"));
+    Touche* lamD = new Touche(this, QString("Backspace"),QString("La#"));
     lamD->black();
     lamD->move(sizeT*nT-sizeT/4,hauteur);
 

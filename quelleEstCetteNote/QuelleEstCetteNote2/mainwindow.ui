@@ -14,20 +14,20 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="sdf">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>140</y>
-      <width>103</width>
-      <height>27</height>
+      <x>70</x>
+      <y>100</y>
+      <width>141</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: white;</string>
+     <string notr="true">border-image: url(:/img/doremi);</string>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string/>
     </property>
    </widget>
    <widget class="QSlider" name="verticalSlider">
@@ -49,8 +49,8 @@
    <widget class="QSlider" name="horizontalSlider">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>100</y>
+      <x>150</x>
+      <y>60</y>
       <width>160</width>
       <height>24</height>
      </rect>
@@ -62,6 +62,50 @@
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
+   <widget class="QPushButton" name="dfsdfsd">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>50</y>
+      <width>131</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+      <kerning>false</kerning>
+     </font>
+    </property>
+    <property name="accessibleName">
+     <string comment="cwcdsf"/>
+    </property>
+    <property name="text">
+     <string comment="sqdfqs" extracomment="cxcw">dennis</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>16</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+    <property name="autoRepeat">
+     <bool>false</bool>
+    </property>
+    <property name="autoExclusive">
+     <bool>false</bool>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -69,7 +113,7 @@
      <x>0</x>
      <y>0</y>
      <width>400</width>
-     <height>25</height>
+     <height>28</height>
     </rect>
    </property>
   </widget>

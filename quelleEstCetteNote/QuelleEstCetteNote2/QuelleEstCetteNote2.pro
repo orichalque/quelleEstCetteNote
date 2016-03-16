@@ -29,7 +29,8 @@ HEADERS  += mainwindow.h \
 FORMS    += mainwindow.ui
 
 RESOURCES += \
-    res.qrc
+    res.qrc \
+    buttonclavier.qrc
 
 QMAKE_CXXFLAGS += -std=c++11
 

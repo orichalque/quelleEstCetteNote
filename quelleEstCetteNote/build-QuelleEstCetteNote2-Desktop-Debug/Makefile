@@ -54,6 +54,7 @@ SOURCES       = ../QuelleEstCetteNote2/main.cpp \
 		../QuelleEstCetteNote2/piano.cpp \
 		../QuelleEstCetteNote2/touche.cpp \
 		../QuelleEstCetteNote2/portee.cpp qrc_res.cpp \
+		qrc_buttonclavier.cpp \
 		moc_mainwindow.cpp \
 		moc_piano.cpp
 OBJECTS       = main.o \
@@ -63,6 +64,7 @@ OBJECTS       = main.o \
 		touche.o \
 		portee.o \
 		qrc_res.o \
+		qrc_buttonclavier.o \
 		moc_mainwindow.o \
 		moc_piano.o
 DIST          = ../QuelleEstCetteNote2/logtouches.log \
@@ -126,8 +128,7 @@ DIST          = ../QuelleEstCetteNote2/logtouches.log \
 		../QuelleEstCetteNote2/note.h \
 		../QuelleEstCetteNote2/piano.h \
 		../QuelleEstCetteNote2/touche.h \
-		../QuelleEstCetteNote2/portee.h \
-		partiebasse.h ../QuelleEstCetteNote2/main.cpp \
+		../QuelleEstCetteNote2/portee.h ../QuelleEstCetteNote2/main.cpp \
 		../QuelleEstCetteNote2/mainwindow.cpp \
 		../QuelleEstCetteNote2/note.cpp \
 		../QuelleEstCetteNote2/piano.cpp \
@@ -221,6 +222,7 @@ Makefile: ../QuelleEstCetteNote2/QuelleEstCetteNote2.pro /usr/lib/x86_64-linux-g
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
 		../QuelleEstCetteNote2/QuelleEstCetteNote2.pro \
 		../QuelleEstCetteNote2/res.qrc \
+		../QuelleEstCetteNote2/buttonclavier.qrc \
 		/usr/lib/x86_64-linux-gnu/libQt5Widgets.prl \
 		/usr/lib/x86_64-linux-gnu/libQt5Gui.prl \
 		/usr/lib/x86_64-linux-gnu/libQt5Core.prl \
@@ -285,6 +287,7 @@ Makefile: ../QuelleEstCetteNote2/QuelleEstCetteNote2.pro /usr/lib/x86_64-linux-g
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf:
 ../QuelleEstCetteNote2/QuelleEstCetteNote2.pro:
 ../QuelleEstCetteNote2/res.qrc:
+../QuelleEstCetteNote2/buttonclavier.qrc:
 /usr/lib/x86_64-linux-gnu/libQt5Widgets.prl:
 /usr/lib/x86_64-linux-gnu/libQt5Gui.prl:
 /usr/lib/x86_64-linux-gnu/libQt5Core.prl:
@@ -304,8 +307,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../QuelleEstCetteNote2/res.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents ../QuelleEstCetteNote2/mainwindow.h ../QuelleEstCetteNote2/note.h ../QuelleEstCetteNote2/piano.h ../QuelleEstCetteNote2/touche.h ../QuelleEstCetteNote2/portee.h partiebasse.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../QuelleEstCetteNote2/res.qrc ../QuelleEstCetteNote2/buttonclavier.qrc $(DISTDIR)/
+	$(COPY_FILE) --parents ../QuelleEstCetteNote2/mainwindow.h ../QuelleEstCetteNote2/note.h ../QuelleEstCetteNote2/piano.h ../QuelleEstCetteNote2/touche.h ../QuelleEstCetteNote2/portee.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../QuelleEstCetteNote2/main.cpp ../QuelleEstCetteNote2/mainwindow.cpp ../QuelleEstCetteNote2/note.cpp ../QuelleEstCetteNote2/piano.cpp ../QuelleEstCetteNote2/touche.cpp ../QuelleEstCetteNote2/portee.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../QuelleEstCetteNote2/mainwindow.ui $(DISTDIR)/
 
@@ -328,9 +331,9 @@ mocables: compiler_moc_header_make_all compiler_moc_source_make_all
 
 check: first
 
-compiler_rcc_make_all: qrc_res.cpp
+compiler_rcc_make_all: qrc_res.cpp qrc_buttonclavier.cpp
 compiler_rcc_clean:
-	-$(DEL_FILE) qrc_res.cpp
+	-$(DEL_FILE) qrc_res.cpp qrc_buttonclavier.cpp
 qrc_res.cpp: ../QuelleEstCetteNote2/res.qrc \
 		../QuelleEstCetteNote2/clef.jpg \
 		../QuelleEstCetteNote2/clef.png \
@@ -359,6 +362,11 @@ qrc_res.cpp: ../QuelleEstCetteNote2/res.qrc \
 		../QuelleEstCetteNote2/son/dom.wav \
 		../QuelleEstCetteNote2/son/sim.wav
 	/usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name res ../QuelleEstCetteNote2/res.qrc -o qrc_res.cpp
+
+qrc_buttonclavier.cpp: ../QuelleEstCetteNote2/buttonclavier.qrc \
+		../QuelleEstCetteNote2/clavier.svg.png \
+		../QuelleEstCetteNote2/doremi
+	/usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name buttonclavier ../QuelleEstCetteNote2/buttonclavier.qrc -o qrc_buttonclavier.cpp
 
 compiler_moc_header_make_all: moc_mainwindow.cpp moc_piano.cpp
 compiler_moc_header_clean:
@@ -416,6 +424,9 @@ portee.o: ../QuelleEstCetteNote2/portee.cpp ../QuelleEstCetteNote2/portee.h \
 
 qrc_res.o: qrc_res.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_res.o qrc_res.cpp
+
+qrc_buttonclavier.o: qrc_buttonclavier.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_buttonclavier.o qrc_buttonclavier.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp

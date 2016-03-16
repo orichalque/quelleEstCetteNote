@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>clavier.svg.png</file>
+        <file>doremi</file>
+    </qresource>
+</RCC>
