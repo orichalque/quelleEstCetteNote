@@ -19,7 +19,6 @@ SOURCES += main.cpp\
     touche.cpp \
     portee.cpp \
     log.cpp \
-    partiebasse.cpp
 
 HEADERS  += mainwindow.h \
     note.h \
