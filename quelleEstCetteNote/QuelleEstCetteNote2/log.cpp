@@ -21,7 +21,7 @@ void log(char  message[], char mess2[]){
     }
     char * ti = getMyTime();
     fprintf(f, "%s : %s %s\n", ti, message, mess2);
-    printf("%s : %s %s\n", ti, message, mess2);
-    free(ti);
+    //printf("%s : %s %s\n", ti, message, mess2);
+    //free(ti);
     fclose(f);
 }

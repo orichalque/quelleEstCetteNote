@@ -19,13 +19,14 @@ SOURCES += main.cpp\
     touche.cpp \
     portee.cpp \
     log.cpp \
-    log2.cpp
+    partiebasse.cpp
 
 HEADERS  += mainwindow.h \
     note.h \
     piano.h \
     touche.h \
-    portee.h
+    portee.h \
+    partiebasse.h
 
 FORMS    += mainwindow.ui
 

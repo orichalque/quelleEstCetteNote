@@ -1,15 +1,28 @@
 #include "piano.h"
 #include "log.cpp"
+#include <QVBoxLayout>
+#include <QSlider>
+#include <QVector>
 
 char action[50]= "appuie sur touche";
 Piano::Piano(QWidget *parent) :
     QWidget(parent)
 {
+
+    b_names_dip = false;
+    b_racc_disp = false;
+    notes = new QVector<Touche*>();
     setFixedSize(800, 310);
+
+    QPushButton *raccButt= new QPushButton(QString("raccourcis"),this);
+    QPushButton *noteNames = new QPushButton(QString("do ré mi ..."),this);
+
     Touche* doM = new Touche(this, QString("tab"),QString("DoM"));
     int sizeT= doM->width();
     int hauteur = 100;
-    int nT =9;
+    int nT =3;
+    raccButt->move(0,hauteur+50);
+    noteNames->move(700,hauteur +50);
     doM->move(sizeT*nT,hauteur);
     nT+=1;
     Touche* reM = new Touche(this, QString("A"),QString("RéM"));
@@ -53,7 +66,7 @@ Piano::Piano(QWidget *parent) :
     sim->move(sizeT*nT,hauteur);
 
 
-    nT=10;
+    nT=4;
 
 
     Touche* doMD = new Touche(this, QString("&"),QString("DoMD"));
@@ -101,36 +114,113 @@ Piano::Piano(QWidget *parent) :
 
 
 
-     QObject::connect(dom, SIGNAL(clicked()), this, SLOT(play_dom()));
-     QObject::connect(rem, SIGNAL(clicked()), this, SLOT(play_rem()));
-     QObject::connect(mim, SIGNAL(clicked()), this, SLOT(play_mim()));
-     QObject::connect(fam, SIGNAL(clicked()), this, SLOT(play_fam()));
-     QObject::connect(solm, SIGNAL(clicked()), this, SLOT(play_solm()));
-     QObject::connect(lam, SIGNAL(clicked()), this, SLOT(play_lam()));
-     QObject::connect(sim, SIGNAL(clicked()), this, SLOT(play_sim()));
+     QObject::connect(dom, SIGNAL(clicked()), this, SLOT(play_dom()));notes->append(dom);
+     QObject::connect(rem, SIGNAL(clicked()), this, SLOT(play_rem()));notes->append(rem);
+     QObject::connect(mim, SIGNAL(clicked()), this, SLOT(play_mim()));notes->append(mim);
+     QObject::connect(fam, SIGNAL(clicked()), this, SLOT(play_fam()));notes->append(fam);
+     QObject::connect(solm, SIGNAL(clicked()), this, SLOT(play_solm()));notes->append(solm);
+     QObject::connect(lam, SIGNAL(clicked()), this, SLOT(play_lam()));notes->append(lam);
+     QObject::connect(sim, SIGNAL(clicked()), this, SLOT(play_sim()));notes->append(sim);
 
-     QObject::connect(doM, SIGNAL(clicked()), this, SLOT(play_doM()));
-     QObject::connect(reM, SIGNAL(clicked()), this, SLOT(play_reM()));
-     QObject::connect(miM, SIGNAL(clicked()), this, SLOT(play_miM()));
-     QObject::connect(faM, SIGNAL(clicked()), this, SLOT(play_faM()));
-     QObject::connect(solM, SIGNAL(clicked()), this, SLOT(play_solM()));
-     QObject::connect(laM, SIGNAL(clicked()), this, SLOT(play_laM()));
-     QObject::connect(siM, SIGNAL(clicked()), this, SLOT(play_siM()));
+     QObject::connect(doM, SIGNAL(clicked()), this, SLOT(play_doM()));notes->append(doM);
+     QObject::connect(reM, SIGNAL(clicked()), this, SLOT(play_reM()));notes->append(reM);
+     QObject::connect(miM, SIGNAL(clicked()), this, SLOT(play_miM()));notes->append(miM);
+     QObject::connect(faM, SIGNAL(clicked()), this, SLOT(play_faM()));notes->append(faM);
+     QObject::connect(solM, SIGNAL(clicked()), this, SLOT(play_solM()));notes->append(solM);
+     QObject::connect(laM, SIGNAL(clicked()), this, SLOT(play_laM()));notes->append(laM);
+     QObject::connect(siM, SIGNAL(clicked()), this, SLOT(play_siM()));notes->append(siM);
 
-     QObject::connect(domD, SIGNAL(clicked()), this, SLOT(play_domD()));
-     QObject::connect(remD, SIGNAL(clicked()), this, SLOT(play_remD()));
+     QObject::connect(domD, SIGNAL(clicked()), this, SLOT(play_domD()));notes->append(domD);
+     QObject::connect(remD, SIGNAL(clicked()), this, SLOT(play_remD()));notes->append(remD);
 
-     QObject::connect(famD, SIGNAL(clicked()), this, SLOT(play_famD()));
-     QObject::connect(solmD, SIGNAL(clicked()), this, SLOT(play_solmD()));
-     QObject::connect(lamD, SIGNAL(clicked()), this, SLOT(play_lamD()));
+     QObject::connect(famD, SIGNAL(clicked()), this, SLOT(play_famD()));notes->append(famD);
+     QObject::connect(solmD, SIGNAL(clicked()), this, SLOT(play_solmD()));notes->append(solmD);
+     QObject::connect(lamD, SIGNAL(clicked()), this, SLOT(play_lamD()));notes->append(lamD);
 
-     QObject::connect(doMD, SIGNAL(clicked()), this, SLOT(play_doMD()));
-     QObject::connect(reMD, SIGNAL(clicked()), this, SLOT(play_reMD()));
+     QObject::connect(doMD, SIGNAL(clicked()), this, SLOT(play_doMD()));notes->append(doMD);
+     QObject::connect(reMD, SIGNAL(clicked()), this, SLOT(play_reMD()));notes->append(reMD);
 
-     QObject::connect(faMD, SIGNAL(clicked()), this, SLOT(play_faMD()));
-     QObject::connect(solMD, SIGNAL(clicked()), this, SLOT(play_solMD()));
-     QObject::connect(laMD, SIGNAL(clicked()), this, SLOT(play_laMD()));
+     QObject::connect(faMD, SIGNAL(clicked()), this, SLOT(play_faMD()));notes->append(faMD);
+     QObject::connect(solMD, SIGNAL(clicked()), this, SLOT(play_solMD()));notes->append(solMD);
+     QObject::connect(laMD, SIGNAL(clicked()), this, SLOT(play_laMD()));notes->append(laMD);
 
+     QObject::connect(raccButt, SIGNAL(clicked()), this, SLOT(display_racc()));
+     QObject::connect(noteNames, SIGNAL(clicked()), this, SLOT(display_names()));
+
+}
+
+void Piano::display_racc(){
+    for(Touche *t : *notes){
+        if(b_racc_disp){
+           /* if(b_names_dip){
+
+            }else{
+
+            }*/
+            auto rac = t->getRacc(); //sauvegarde du raccourci qui change sinon
+            t->setText("");
+            t->setShortcut(rac);
+        }else{
+           /* if(b_names_dip){
+
+            }else{*/
+                auto rac = t->getRacc(); //sauvegarde du raccourci qui change sinon
+                t->setText(t->getRacc());
+                t->setShortcut(rac);
+                if(t->blacked){
+                    t->setStyleSheet("background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(182, 182, 182, 255), stop:0.564576 rgba(0, 0, 0, 255));"
+                                    "font: bold;"
+                                  "color: white;"
+                                  "border-style: outset;"
+                                  "border-color: white;"
+                                  "font-size: 6px;"
+                                  "border-bottom-right-radius: 3px;"
+                                  "border-bottom-left-radius: 3px;"
+                                  );
+
+                }
+           // }
+        }
+    }
+
+    b_racc_disp = !(b_racc_disp);
+    b_names_dip =false;
+}
+void Piano::display_names(){
+    for(Touche *t : *notes){
+        if(b_names_dip){
+            /*if(b_names_dip){
+
+            }else{
+
+            }*/
+            auto rac = t->getRacc(); //sauvegarde du raccourci qui change sinon
+            t->setText("");
+            t->setShortcut(rac);
+        }else{
+            /*if(b_names_dip){
+
+            }else{*/
+               auto rac = t->getRacc(); //sauvegarde du raccourci qui change sinon
+               t->setText(t->getNote());
+               t->setShortcut(rac);
+               if(t->blacked){
+                   t->setStyleSheet("background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(182, 182, 182, 255), stop:0.564576 rgba(0, 0, 0, 255));"
+                                   "font: bold;"
+                                 "color: white;"
+                                 "border-style: outset;"
+                                 "border-color: white;"
+                                 "font-size: 6px;"
+                                 "border-bottom-right-radius: 3px;"
+                                 "border-bottom-left-radius: 3px;"
+                                 );
+
+               }
+            //}
+        }
+    }
+    b_names_dip = !(b_names_dip);
+    b_racc_disp = false;
 }
  void Piano::play_dom(){
      QSound::play(":/new/prefix1/son/dom.wav");
@@ -256,5 +346,6 @@ Piano::Piano(QWidget *parent) :
      char action2[50]=  "la# Majeur";
      log(action,action2);
  }
+
 
 

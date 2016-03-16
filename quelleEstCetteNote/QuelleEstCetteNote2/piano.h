@@ -5,6 +5,8 @@
 #include "touche.h"
 #include <QSound>
 #include <QMessageBox>
+#include <QVector>
+
 
 class Piano : public QWidget
 {
@@ -13,6 +15,11 @@ public:
     explicit Piano(QWidget *parent = 0);
 
 signals:
+private:
+    QVector<Touche*> *notes;
+    bool b_racc_disp;
+    bool b_names_dip;
+
 
 public slots:
     void play_dom();
@@ -44,6 +51,8 @@ public slots:
     void play_faMD();
     void play_solMD();
     void play_laMD();
+    void display_racc();
+    void display_names();
 
 };
 

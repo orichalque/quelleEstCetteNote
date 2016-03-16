@@ -6,6 +6,7 @@
 #include "portee.h"
 #include <QLayout>
 #include <QVBoxLayout>
+#include <QSlider>
 
 using namespace std;
 int main(int argc, char *argv[])
@@ -13,13 +14,16 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     QWidget w;
 
-    w.setFixedSize(1366, 720);
+    w.setFixedSize(800, 720);
     Piano *pi = new Piano(&w);
     Portee *po = new Portee(&w);
-    QHBoxLayout qhblupper;
+  /*  QHBoxLayout qhblupper;
+    qhblupper.addSpacing(1);
+    qhblupper.addWidget(po);
+    qhblupper.addSpacing(1);;*/
 
-   /* pi -> setFixedSize(1000, 300);
-    po -> setFixedSize(1000, 300);*/
+
+
     QVBoxLayout qvbox;
     qvbox.addWidget(po);
     qvbox.addWidget(pi);
@@ -27,6 +31,7 @@ int main(int argc, char *argv[])
 
 
     w.setLayout(&qvbox);
+    //MainWindow w;
     w.show();
 
     return a.exec();
