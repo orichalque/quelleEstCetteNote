@@ -84,6 +84,9 @@
     <property name="accessibleName">
      <string comment="cwcdsf"/>
     </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
     <property name="text">
      <string comment="sqdfqs" extracomment="cxcw">dennis</string>
     </property>

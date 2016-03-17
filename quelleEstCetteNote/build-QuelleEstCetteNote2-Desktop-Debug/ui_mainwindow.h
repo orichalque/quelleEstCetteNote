@@ -70,6 +70,7 @@ public:
         font.setStrikeOut(false);
         font.setKerning(false);
         dfsdfsd->setFont(font);
+        dfsdfsd->setStyleSheet(QStringLiteral(""));
         dfsdfsd->setIconSize(QSize(50, 16));
         dfsdfsd->setCheckable(true);
         dfsdfsd->setChecked(false);

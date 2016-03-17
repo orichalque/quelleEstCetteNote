@@ -86,10 +86,10 @@ void Portee::paintEvent(QPaintEvent *event){
     QPalette Pal(palette());
 
     // set black background
-    Pal.setColor(QPalette::Background, QColor::fromRgb(203, 243, 238));
+    /*Pal.setColor(QPalette::Background, QColor::fromRgb(255, 255, 255));
     this->setAutoFillBackground(true);
     this->setPalette(Pal);
-    this->show();
+    this->show();*/
 
     //C key placement
     QImage key(":/new/prefix1/clef.png");

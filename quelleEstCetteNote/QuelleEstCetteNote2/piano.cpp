@@ -174,6 +174,8 @@ void Piano::checking(bool checked){
     int nT =3;
     int hauteur= 100;
     if(checked){
+        QSound::play(":/new/prefix1/son/sim.wav");
+        QSound::play(":/new/prefix1/son/solm.wav");
         //reduire le piano
             for(Touche *t : *notes){
                 if(t->blacked){
@@ -197,6 +199,8 @@ void Piano::checking(bool checked){
         nT =0;
         hauteur= 60;
         QSound::play(":/new/prefix1/son/doM.wav");
+        QSound::play(":/new/prefix1/son/faM.wav");
+
         //agrandir piano
         for(Touche *t : *notes){
             if(t->blacked){

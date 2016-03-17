@@ -7,6 +7,7 @@
 #include <QLayout>
 #include <QVBoxLayout>
 #include <QSlider>
+#include <QPalette>
 
 using namespace std;
 int main(int argc, char *argv[])
@@ -15,6 +16,13 @@ int main(int argc, char *argv[])
     QWidget w;
 
     w.setFixedSize(800, 720);
+
+    // set color background
+    QPalette Pal(w.palette());
+    Pal.setColor(QPalette::Background, QColor::fromRgb(250, 250, 250));
+    w.setAutoFillBackground(true);
+    w.setPalette(Pal);
+
     Piano *pi = new Piano(&w);
     Portee *po = new Portee(&w);
   /*  QHBoxLayout qhblupper;
