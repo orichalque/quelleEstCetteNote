@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
@@ -32,6 +33,7 @@ public:
     QSlider *verticalSlider;
     QSlider *horizontalSlider;
     QPushButton *dfsdfsd;
+    QCheckBox *checkBox;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -73,6 +75,9 @@ public:
         dfsdfsd->setChecked(false);
         dfsdfsd->setAutoRepeat(false);
         dfsdfsd->setAutoExclusive(false);
+        checkBox = new QCheckBox(centralWidget);
+        checkBox->setObjectName(QStringLiteral("checkBox"));
+        checkBox->setGeometry(QRect(10, 210, 104, 23));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -98,6 +103,7 @@ public:
         dfsdfsd->setAccessibleName(QString());
 #endif // QT_NO_ACCESSIBILITY
         dfsdfsd->setText(QApplication::translate("MainWindow", "dennis", "sqdfqs"));
+        checkBox->setText(QApplication::translate("MainWindow", "CheckBox", 0));
     } // retranslateUi
 
 };

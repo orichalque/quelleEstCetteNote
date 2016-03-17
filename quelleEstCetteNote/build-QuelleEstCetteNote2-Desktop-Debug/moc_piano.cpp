@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_Piano_t {
-    QByteArrayData data[28];
-    char stringdata[264];
+    QByteArrayData data[30];
+    char stringdata[281];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -56,7 +56,9 @@ QT_MOC_LITERAL(23, 206, 9), // "play_faMD"
 QT_MOC_LITERAL(24, 216, 10), // "play_solMD"
 QT_MOC_LITERAL(25, 227, 9), // "play_laMD"
 QT_MOC_LITERAL(26, 237, 12), // "display_racc"
-QT_MOC_LITERAL(27, 250, 13) // "display_names"
+QT_MOC_LITERAL(27, 250, 13), // "display_names"
+QT_MOC_LITERAL(28, 264, 8), // "checking"
+QT_MOC_LITERAL(29, 273, 7) // "checked"
 
     },
     "Piano\0play_dom\0\0play_rem\0play_mim\0"
@@ -65,7 +67,8 @@ QT_MOC_LITERAL(27, 250, 13) // "display_names"
     "play_solM\0play_laM\0play_siM\0play_domD\0"
     "play_remD\0play_famD\0play_solmD\0play_lamD\0"
     "play_doMD\0play_reMD\0play_faMD\0play_solMD\0"
-    "play_laMD\0display_racc\0display_names"
+    "play_laMD\0display_racc\0display_names\0"
+    "checking\0checked"
 };
 #undef QT_MOC_LITERAL
 
@@ -75,7 +78,7 @@ static const uint qt_meta_data_Piano[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      26,   14, // methods
+      27,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -83,32 +86,33 @@ static const uint qt_meta_data_Piano[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,  144,    2, 0x0a /* Public */,
-       3,    0,  145,    2, 0x0a /* Public */,
-       4,    0,  146,    2, 0x0a /* Public */,
-       5,    0,  147,    2, 0x0a /* Public */,
-       6,    0,  148,    2, 0x0a /* Public */,
-       7,    0,  149,    2, 0x0a /* Public */,
-       8,    0,  150,    2, 0x0a /* Public */,
-       9,    0,  151,    2, 0x0a /* Public */,
-      10,    0,  152,    2, 0x0a /* Public */,
-      11,    0,  153,    2, 0x0a /* Public */,
-      12,    0,  154,    2, 0x0a /* Public */,
-      13,    0,  155,    2, 0x0a /* Public */,
-      14,    0,  156,    2, 0x0a /* Public */,
-      15,    0,  157,    2, 0x0a /* Public */,
-      16,    0,  158,    2, 0x0a /* Public */,
-      17,    0,  159,    2, 0x0a /* Public */,
-      18,    0,  160,    2, 0x0a /* Public */,
-      19,    0,  161,    2, 0x0a /* Public */,
-      20,    0,  162,    2, 0x0a /* Public */,
-      21,    0,  163,    2, 0x0a /* Public */,
-      22,    0,  164,    2, 0x0a /* Public */,
-      23,    0,  165,    2, 0x0a /* Public */,
-      24,    0,  166,    2, 0x0a /* Public */,
-      25,    0,  167,    2, 0x0a /* Public */,
-      26,    0,  168,    2, 0x0a /* Public */,
-      27,    0,  169,    2, 0x0a /* Public */,
+       1,    0,  149,    2, 0x0a /* Public */,
+       3,    0,  150,    2, 0x0a /* Public */,
+       4,    0,  151,    2, 0x0a /* Public */,
+       5,    0,  152,    2, 0x0a /* Public */,
+       6,    0,  153,    2, 0x0a /* Public */,
+       7,    0,  154,    2, 0x0a /* Public */,
+       8,    0,  155,    2, 0x0a /* Public */,
+       9,    0,  156,    2, 0x0a /* Public */,
+      10,    0,  157,    2, 0x0a /* Public */,
+      11,    0,  158,    2, 0x0a /* Public */,
+      12,    0,  159,    2, 0x0a /* Public */,
+      13,    0,  160,    2, 0x0a /* Public */,
+      14,    0,  161,    2, 0x0a /* Public */,
+      15,    0,  162,    2, 0x0a /* Public */,
+      16,    0,  163,    2, 0x0a /* Public */,
+      17,    0,  164,    2, 0x0a /* Public */,
+      18,    0,  165,    2, 0x0a /* Public */,
+      19,    0,  166,    2, 0x0a /* Public */,
+      20,    0,  167,    2, 0x0a /* Public */,
+      21,    0,  168,    2, 0x0a /* Public */,
+      22,    0,  169,    2, 0x0a /* Public */,
+      23,    0,  170,    2, 0x0a /* Public */,
+      24,    0,  171,    2, 0x0a /* Public */,
+      25,    0,  172,    2, 0x0a /* Public */,
+      26,    0,  173,    2, 0x0a /* Public */,
+      27,    0,  174,    2, 0x0a /* Public */,
+      28,    1,  175,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void,
@@ -137,6 +141,7 @@ static const uint qt_meta_data_Piano[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Bool,   29,
 
        0        // eod
 };
@@ -172,10 +177,10 @@ void Piano::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         case 23: _t->play_laMD(); break;
         case 24: _t->display_racc(); break;
         case 25: _t->display_names(); break;
+        case 26: _t->checking((*reinterpret_cast< bool(*)>(_a[1]))); break;
         default: ;
         }
     }
-    Q_UNUSED(_a);
 }
 
 const QMetaObject Piano::staticMetaObject = {
@@ -203,13 +208,13 @@ int Piano::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 26)
+        if (_id < 27)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 26;
+        _id -= 27;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 26)
+        if (_id < 27)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 26;
+        _id -= 27;
     }
     return _id;
 }

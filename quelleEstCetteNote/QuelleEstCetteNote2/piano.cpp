@@ -3,6 +3,7 @@
 #include <QVBoxLayout>
 #include <QSlider>
 #include <QVector>
+#include <QCheckBox>
 
 char action[50]= "appuie sur touche";
 Piano::Piano(QWidget *parent) :
@@ -16,9 +17,13 @@ Piano::Piano(QWidget *parent) :
 
     QPushButton *raccButt= new QPushButton(QString(""),this);
     QPushButton *noteNames = new QPushButton(QString(""),this);
+    QCheckBox *checkB = new QCheckBox(QString("options"),this);
+    checkB->setChecked(true);
 
     Touche* doM = new Touche(this, QString("tab"),QString("Do"));
-    int sizeT= doM->width();
+    int sizeT= 38;//doM->width();
+    //QMessageBox::information(new QWidget(),QString("taille "),QString::number(sizeT));
+
     int hauteur = 100;
     int nT =3;
     raccButt->move(0,hauteur+50);
@@ -124,13 +129,7 @@ Piano::Piano(QWidget *parent) :
 
 
 
-     QObject::connect(dom, SIGNAL(clicked()), this, SLOT(play_dom()));notes->append(dom);
-     QObject::connect(rem, SIGNAL(clicked()), this, SLOT(play_rem()));notes->append(rem);
-     QObject::connect(mim, SIGNAL(clicked()), this, SLOT(play_mim()));notes->append(mim);
-     QObject::connect(fam, SIGNAL(clicked()), this, SLOT(play_fam()));notes->append(fam);
-     QObject::connect(solm, SIGNAL(clicked()), this, SLOT(play_solm()));notes->append(solm);
-     QObject::connect(lam, SIGNAL(clicked()), this, SLOT(play_lam()));notes->append(lam);
-     QObject::connect(sim, SIGNAL(clicked()), this, SLOT(play_sim()));notes->append(sim);
+
 
      QObject::connect(doM, SIGNAL(clicked()), this, SLOT(play_doM()));notes->append(doM);
      QObject::connect(reM, SIGNAL(clicked()), this, SLOT(play_reM()));notes->append(reM);
@@ -140,12 +139,13 @@ Piano::Piano(QWidget *parent) :
      QObject::connect(laM, SIGNAL(clicked()), this, SLOT(play_laM()));notes->append(laM);
      QObject::connect(siM, SIGNAL(clicked()), this, SLOT(play_siM()));notes->append(siM);
 
-     QObject::connect(domD, SIGNAL(clicked()), this, SLOT(play_domD()));notes->append(domD);
-     QObject::connect(remD, SIGNAL(clicked()), this, SLOT(play_remD()));notes->append(remD);
-
-     QObject::connect(famD, SIGNAL(clicked()), this, SLOT(play_famD()));notes->append(famD);
-     QObject::connect(solmD, SIGNAL(clicked()), this, SLOT(play_solmD()));notes->append(solmD);
-     QObject::connect(lamD, SIGNAL(clicked()), this, SLOT(play_lamD()));notes->append(lamD);
+     QObject::connect(dom, SIGNAL(clicked()), this, SLOT(play_dom()));notes->append(dom);
+     QObject::connect(rem, SIGNAL(clicked()), this, SLOT(play_rem()));notes->append(rem);
+     QObject::connect(mim, SIGNAL(clicked()), this, SLOT(play_mim()));notes->append(mim);
+     QObject::connect(fam, SIGNAL(clicked()), this, SLOT(play_fam()));notes->append(fam);
+     QObject::connect(solm, SIGNAL(clicked()), this, SLOT(play_solm()));notes->append(solm);
+     QObject::connect(lam, SIGNAL(clicked()), this, SLOT(play_lam()));notes->append(lam);
+     QObject::connect(sim, SIGNAL(clicked()), this, SLOT(play_sim()));notes->append(sim);
 
      QObject::connect(doMD, SIGNAL(clicked()), this, SLOT(play_doMD()));notes->append(doMD);
      QObject::connect(reMD, SIGNAL(clicked()), this, SLOT(play_reMD()));notes->append(reMD);
@@ -154,9 +154,66 @@ Piano::Piano(QWidget *parent) :
      QObject::connect(solMD, SIGNAL(clicked()), this, SLOT(play_solMD()));notes->append(solMD);
      QObject::connect(laMD, SIGNAL(clicked()), this, SLOT(play_laMD()));notes->append(laMD);
 
+     QObject::connect(domD, SIGNAL(clicked()), this, SLOT(play_domD()));notes->append(domD);
+     QObject::connect(remD, SIGNAL(clicked()), this, SLOT(play_remD()));notes->append(remD);
+
+     QObject::connect(famD, SIGNAL(clicked()), this, SLOT(play_famD()));notes->append(famD);
+     QObject::connect(solmD, SIGNAL(clicked()), this, SLOT(play_solmD()));notes->append(solmD);
+     QObject::connect(lamD, SIGNAL(clicked()), this, SLOT(play_lamD()));notes->append(lamD);
+
+
      QObject::connect(raccButt, SIGNAL(clicked()), this, SLOT(display_racc()));
      QObject::connect(noteNames, SIGNAL(clicked()), this, SLOT(display_names()));
+     QObject::connect(checkB, SIGNAL(toggled(bool)), this, SLOT(checking(bool)));
 
+}
+
+void Piano::checking(bool checked){
+    int sizeT= 38;
+
+    int nT =3;
+    int hauteur= 100;
+    if(checked){
+        //reduire le piano
+            for(Touche *t : *notes){
+                if(t->blacked){
+                    t->resize(sizeT*2/3,sizeT*8/3);
+                    t->move(sizeT*(nT-13)-sizeT/4,hauteur);
+                    nT++;
+                    if(nT==19||nT==23||nT==26){
+                        nT++;
+                    }
+                }else{
+                    t->resize(sizeT,sizeT*4);
+                    t->move(sizeT*nT,hauteur);
+                    nT++;
+                }
+
+            }
+
+    }else{
+        sizeT= 56;
+
+        nT =0;
+        hauteur= 60;
+        QSound::play(":/new/prefix1/son/doM.wav");
+        //agrandir piano
+        for(Touche *t : *notes){
+            if(t->blacked){
+                t->resize(sizeT*2/3,sizeT*8/3);
+                t->move(sizeT*(nT-13)-sizeT/4,hauteur);
+                nT++;
+                if(nT==19-3||nT==23-3||nT==26-3){
+                    nT++;
+                }
+            }else{
+                t->resize(sizeT,sizeT*4);
+                t->move(sizeT*nT,hauteur);
+                nT++;
+            }
+
+        }
+    }
 }
 
 void Piano::display_racc(){

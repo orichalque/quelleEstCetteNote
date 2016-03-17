@@ -53,6 +53,7 @@ public slots:
     void play_laMD();
     void display_racc();
     void display_names();
+    void checking(bool checked);
 
 };
 
