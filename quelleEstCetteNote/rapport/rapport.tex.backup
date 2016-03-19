@@ -1,0 +1,211 @@
+\documentclass{article}
+\usepackage[frenchb]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{float}
+
+\pagestyle{fancy}
+\title{Projet d'interface Homme-Machine : \bsc{Quelle Est Cette Note}}
+\author{Thibault \bsc{Béziers La Fosse}, Dennis \bsc{Bordet}}
+
+
+
+
+\begin{document}
+
+\renewcommand{\contentsname}{Sommaire} 
+
+
+\maketitle
+\date
+
+
+\begin{figure}[h]
+
+\begin{center}
+\includegraphics[width = 250px]{./images/deb2.jpg}
+\end{center}
+
+\end{figure}
+
+
+
+
+
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+
+\vspace{1cm}
+
+\subsection{Problématique et but du projet}
+
+\vspace{1cm}
+
+L'idée est de réaliser un petit logiciel pour initier les débutants au solfège. Il fallait donc au départ restreindre le programme,
+le domaine de la musique étant assez vaste. Il a donc été décidé collégiallement que le programme aurait un niveau assez faible et 
+simple, niveau 6e en musique.
+
+
+\subsection{Interface générale}
+
+\vspace{1cm}
+
+Il faut donc que l'utilisateur sache lire une partition simple en clef de sol, la partition ne contient que deux gammes.
+
+L'outil choisi pour entrer les notes est un clavier de piano. Le piano étant un instrument universel en musique.
+
+Il a également été décidé de représenter les \verb # 
+{ }et les b-mol, ceux-ci étant présent dans de très nombreuses partitions, il est donc
+important pour un débutant d'en prendre connaissance.
+
+
+\subsection{Plan}
+\begin{itemize}
+\item Explications des choix de l'interface
+\item Paper prototype et compte rendu des essais
+\item Test du logiciel par des cobayes
+\end{itemize}
+
+\newpage
+\section{Différents éléments de l'interface}
+
+\subsection{Piano}
+\subsection{Portée}
+\subsection{Menu}
+
+\subsection{Couleur de fond}
+\subsection{Bind clavier}
+\subsection{Affichage des raccourcis}
+\subsection{Affichage du nom des notes}
+\subsection{Masquer les options}
+
+\subsection{Note de fin de session}
+\subsection{Progression}
+\subsection{Choix de partitions}
+
+
+
+
+La recherche complète consiste à trouver toutes les solutions d'un problème, ou bien à prouver qu'il n'existe pas de solutions. 
+Pour effectuer cette recherche, on utilise un algorithme de \emph{Branch \& Prune}, fortement inspiré de celui vu en cours. 
+
+On part d'un nœud vide, et pour chaque possibilité d'assignement de la variable suivante on crée une branche, c'est le \emph{branching}.
+
+On assigne donc nos variables $x_i$ une par une et on retire les valeurs qui ne valident pas les contraintes du domaine des variables pour les branches suivantes, c'est le \emph{pruning}. S'il n'y a plus de valeur possible dans le domaine d'une variable, c'est que l'assignement ne valide pas les contraintes. On peut donc fermer la branche et passer à la suivante.
+
+Ainsi les branches dont toutes les variables sont assignées représentent une solution. Et de cette manière, en récupérant tous ces assignements différents, nous récupérons l'ensemble des solutions du problème. 
+
+\clearpage
+
+Dans l'exemple suivant, on assigne la variable montrée par la croix. Lors de notre pruning, on réduit donc du domaine des variables des noeuds suivants toutes les cases grisées, c'est à dire les cases sur la même colonne, et sur les diagonales, qui violent les contraintes. 
+https://thewalnut.io/app/release/11/ 
+\begin{figure}[h]
+\caption{\label{reine1} Première Reine}
+\begin{center}
+\includegraphics[scale=0.5]{./picture/pruning1.png}
+\end{center}
+\end{figure}
+
+On assigne ensuite une seconde variable, et on recommence tant que le domaine de la variable suivante n'est pas vide. Auquel cas la branche ne peut aboutir à une solution et on l'abandonne.
+
+\begin{figure}[h]
+\caption{\label{reine2} Seconde Reine}
+\begin{center}
+\includegraphics[scale=0.5]{./picture/pruning2.png}
+\end{center}
+\end{figure}
+
+Ainsi on peut trouver toutes les solutions possibles au problème des NQueens.
+
+\subsection{Backtracking}
+Le \emph{backtracking} est semblable au Branch \& Prune sauf que l'algorithme ne "prune" pas. En effet, il créé des branches pour tous les 
+élément du domaine de chaque variables sans exception. on ne vérifie la satisfiabilitée des affectations que quand toutes les variables
+ont été affectées.\\
+Cet algorithme est donc évidemment moins efficace que le Branch \& Prune.
+
+\begin{figure}[!h]
+\caption{\label{complete4} Tous les résultats pour $n = 4$}
+\begin{center}
+\includegraphics[scale=0.5]{./picture/complete_4.png}
+\end{center}
+\end{figure}
+
+\section{Paper Prototype}
+
+La recherche locale de notre programme, par rapport à la recherche complète, s'arrête dès qu'elle trouve une solution au problème. L'algorithme implémenté se nomme
+\emph{min-conflicts algorithm}. 
+
+Pour trouver une solution, ce dernier numérote chaque cellule de la ligne courante par le nombre de collision avec d'autres reines. En effet, si une cellule se trouve sur la même ligne qu'une autre reine, La cellule prend 1 pour valeur. Si elle est en plus sur la diagonale d'une seconde reine, elle prend 2 comme valeur.
+Ainsi pour placer nos reines, on choisira toujours les cases valant 0.
+
+Lorsque plusieurs cellules de la ligne courante ont 0 comme valeur, on choisira la première parcourue. On aurait pu aussi la choisir de manière aléatoire, mais afin d'améliorer le temps d'exécution c'est la première solution que nous avons choisi. 
+
+
+\begin{figure}[!h]
+	\caption{\label{local1} Échiquier vide}
+	\begin{center}
+	\includegraphics[scale=0.3]{./picture/local1.png}
+	\end{center}
+\end{figure}
+
+Ainsi on commence par la première ligne, en ayant 0 comme valeur sur chaque cellule. 
+
+\begin{figure}[!h]
+	\caption{\label{local2} Premier parcours}
+	\begin{center}
+	\includegraphics[scale=0.3]{./picture/local2.png}
+	\end{center}
+\end{figure}
+
+On place la première reine arbitrairement, on calcule ensuite l'indice de chaque cellule des lignes suivantes, jusqu'à avoir placé une reine sur chaque ligne. Si l'une d'elle ne comporte pas de cellule indicée à 0, dans ce cas on place la reine sur l'indice minimum. 
+
+\begin{figure}[!h]
+	\caption{\label{local3} Retour en arrière}
+	\begin{center}
+	\includegraphics[scale=0.3]{./picture/local3.png}
+	\end{center}
+\end{figure}
+
+Enfin, lorsque la reine de la dernière ligne a été placée, on se rend sur la reine violant une contrainte la plus proche. On la déplace sur la cellule de la ligne qui a l'indice minimum. Si cette cellule n'est pas à 0, c'est qu'une nouvelle reine viole une contrainte, on se rend à nouveau sur cette reine, et on la déplace. On recommence tant que des contraintes sont violées. 
+
+\begin{figure}[h]
+\caption{\label{local4} Premier résultat pour $n = 4$}
+\begin{center}
+\includegraphics[scale=0.5]{./picture/local_4.png}
+\end{center}
+\end{figure}
+
+\section{Test du logiciel par des cobayes}
+\subsection{Complete search}
+\begin{figure}[!h]
+	\caption{\label{csearch} Recherche complète}
+	\begin{center}
+	\includegraphics[scale=0.5]{./picture/compelte_search.png}
+	\end{center}
+\end{figure}
+Voici les résultats d'exécution de l'algorithme de recherche complète de solutions. On voit assez rapidement que le temps d'exécution croit de manière exponentielle, puisque à partir de 12 reines, la résolution dure 44 secondes. Nous n'avons pas fait plus d'exécutions pour une raison temporelle évidente.
+\clearpage
+
+\subsection{Local search}
+\begin{figure}[!h]
+	\caption{\label{lsearch} Recherche locale}
+	\begin{center}
+	\includegraphics[scale=0.5]{./picture/local_search.png}
+	\end{center}
+\end{figure}
+Voici ici les résultats d'exécution de l'algorithme de recherche locale d'une solution. Par rapport à l'algorithme précédent, on observe que l'on peut résoudre des problèmes avec un nombre plus important de reines. La croissance est elle aussi exponentielle, mais permet des résultats bien plus rapides qu'avec une recherche complète. 
+
+
+\section{Conclusion}
+Pour conclure ce projet, l'implémentation des algorithmes de recherche de solutions a été un exercice très intéressant, et nous a notamment permis de comprendre beaucoup plus aisément les algorithmes vus en cours. En voyant les résultats d'exécution, on comprend rapidement que l'algorithme de recherche locale est bien plus rapide que celui de recherche complète. Si bien qu'il vaut mieux utiliser ce dernier dans le cas où l'on a besoin de toutes les solutions. Ainsi l'algorithme de recherche locale est plutôt efficace dans le cadre d'un problème de satisfiabilité.
+
+\end{document}
+

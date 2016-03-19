@@ -13,6 +13,8 @@ class Piano : public QWidget
     Q_OBJECT
 public:
     explicit Piano(QWidget *parent = 0);
+    QVector<QString> *notes_jouees;
+    QVector<bool>* comparaison(QVector<QString> *partition);
 
 signals:
 private:
@@ -22,6 +24,7 @@ private:
 
 
 public slots:
+    void retour_arriere();
     void play_dom();
     void play_rem();
     void play_mim();

@@ -104,6 +104,7 @@ void Portee::paintEvent(QPaintEvent *event){
         if (nbOfNotesDrawn % 14 == 0 && nbOfNotesDrawn > 0){
             xNote = 0.22*w;
         }
+
         //if (this->piano->note_)
         p.drawLine(xNote, yNote, xNote , yNote + 5*interLineSpace);
         /* NOTE CLASSIQUE */
@@ -211,11 +212,6 @@ void Portee::paintEvent(QPaintEvent *event){
             mid = true;
             diese = true;
         } else
-        if (noteName == "bM" || noteName =="simD"){
-            yNote = yNote - 6.5*interLineSpace;
-            down = true;
-            diese = true;
-        }
 
         if (down == true){
             p.drawImage(xNote, yNote, blackD);

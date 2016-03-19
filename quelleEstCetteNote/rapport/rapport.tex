@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage[frenchb]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{float}
+
+\pagestyle{fancy}
+\title{Projet d'interface Homme-Machine : \bsc{Quelle Est Cette Note}}
+\author{Thibault \bsc{Béziers La Fosse}, Dennis \bsc{Bordet}}
+
+
+
+
+\begin{document}
+
+\renewcommand{\contentsname}{Sommaire} 
+
+
+\maketitle
+\date
+
+
+\begin{figure}[h]
+
+\begin{center}
+\includegraphics[width = 250px]{./images/deb2.jpg}
+\end{center}
+
+\end{figure}
+
+
+
+
+
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+
+\vspace{1cm}
+
+\subsection{Problématique et but du projet}
+
+\vspace{1cm}
+
+L'idée est de réaliser un petit logiciel pour initier les débutants au solfège. Il fallait donc au départ restreindre le programme,
+le domaine de la musique étant assez vaste. Il a donc été décidé collégiallement que le programme aurait un niveau assez faible et 
+simple, niveau 6e en musique.
+
+
+\subsection{Interface générale}
+
+\vspace{1cm}
+
+Il faut donc que l'utilisateur sache lire une partition simple en clef de sol, la partition ne contient que deux gammes.
+
+L'outil choisi pour entrer les notes est un clavier de piano. Le piano étant un instrument universel en musique.
+
+Il a également été décidé de représenter les \verb # 
+{ }et les b-mol, ceux-ci étant présent dans de très nombreuses partitions, il est donc
+important pour un débutant d'en prendre connaissance.
+
+
+\subsection{Plan}
+\begin{itemize}
+\item Explications des choix de l'interface
+\item Paper prototype et compte rendu des essais
+\item Test du logiciel par des cobayes
+\end{itemize}
+
+\newpage
+\section{Différents éléments de l'interface}
+
+\subsection{Piano}
+\subsection{Portée}
+\subsection{Menu}
+
+\subsection{Couleur de fond}
+\subsection{Bind clavier}
+\subsection{Affichage des raccourcis}
+\subsection{Affichage du nom des notes}
+\subsection{Masquer les options}
+
+\subsection{Note de fin de session}
+\subsection{Progression}
+\subsection{Choix de partitions}
+\subsection{Aide pour les débutants}
+
+\subsection{Différents logs pour différentes analyses = Compte rendu du jeu}
+genre le mec il a mit longtps a trouvé tel note (difftime) ou bien il se trompe souvent pour telle autre note.
+
+
+
+
+\section{Paper Prototype}
+
+\section{Test du logiciel par des cobayes}
+\section{Conclusion}
+Pour conclure ce projet, l'implémentation des algorithmes de recherche de solutions a été un exercice très intéressant, et nous a notamment permis de comprendre beaucoup plus aisément les algorithmes vus en cours. En voyant les résultats d'exécution, on comprend rapidement que l'algorithme de recherche locale est bien plus rapide que celui de recherche complète. Si bien qu'il vaut mieux utiliser ce dernier dans le cas où l'on a besoin de toutes les solutions. Ainsi l'algorithme de recherche locale est plutôt efficace dans le cadre d'un problème de satisfiabilité.
+
+\end{document}
+

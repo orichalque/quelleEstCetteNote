@@ -11,6 +11,19 @@ char * getMyTime(){
     return myTime;
 }
 
+void init_log(){
+       FILE *f = fopen("logtouches.log", "w");
+       if (f == NULL)
+       {
+           perror("ERROR DURING OPENING FILE :");
+           printf("err\n");
+           exit(errno);
+       }
+       char * ti = getMyTime();
+       fprintf(f, "%s : DEBUT DU PROGRAMME\n", ti);
+       fclose(f);
+}
+
 void log(char  message[], char mess2[]){
     FILE *f = fopen("logtouches.log", "a");
     if (f == NULL)
