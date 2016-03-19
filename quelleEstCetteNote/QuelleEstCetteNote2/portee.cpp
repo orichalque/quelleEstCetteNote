@@ -91,47 +91,77 @@ void Portee::paintEvent(QPaintEvent *event){
             xNote = 0.22*w;
         }
 
-        if (noteName == "cm" || noteName =="dom"){
+        if (noteName == "cM" || noteName =="doM"){
             //yNote immobile
         }
-        if (noteName == "dm" || noteName =="rem"){
+        if (noteName == "cMD" || noteName =="doMD"){
+            //yNote immobile
+        }
+        if (noteName == "dM" || noteName =="reM"){
             yNote = yNote - 0.5*interLineSpace;
         }
-        if (noteName == "em" || noteName =="mim"){
+        if (noteName == "dMD" || noteName =="reMD"){
+            yNote = yNote - 0.5*interLineSpace;
+        }
+        if (noteName == "eM" || noteName =="miM"){
             yNote = yNote - 1*interLineSpace;
         }
-        if (noteName == "fm" || noteName =="fam"){
+        if (noteName == "fM" || noteName =="faM"){
             yNote = yNote - 1.5*interLineSpace;
         }
-        if (noteName == "gm" || noteName =="solm"){
+        if (noteName == "fMD" || noteName =="faMD"){
+            yNote = yNote - 1.5*interLineSpace;
+        }
+        if (noteName == "gM" || noteName =="solM"){
             yNote = yNote - 2*interLineSpace;
         }
-        if (noteName == "am" || noteName =="lam"){
+        if (noteName == "gMD" || noteName =="solMD"){
+            yNote = yNote - 2*interLineSpace;
+        }
+        if (noteName == "aM" || noteName =="laM"){
             yNote = yNote - 2.5*interLineSpace;
         }
-        if (noteName == "bm" || noteName =="sim"){
+        if (noteName == "aMD" || noteName =="laMD"){
+            yNote = yNote - 2.5*interLineSpace;
+        }
+        if (noteName == "bM" || noteName =="siM"){
             yNote = yNote - 3*interLineSpace;
         }
 
-        if (noteName == "cM" || noteName =="doM"){
+        if (noteName == "cm" || noteName =="dom"){
             yNote = yNote - 3.5*interLineSpace;
         }
-        if (noteName == "dM" || noteName =="reM"){
+        if (noteName == "cmD" || noteName =="domD"){
+            yNote = yNote - 3.5*interLineSpace;
+        }
+        if (noteName == "dm" || noteName =="rem"){
             yNote = yNote - 4*interLineSpace;
         }
-        if (noteName == "eM" || noteName =="miM"){
+        if (noteName == "dmD" || noteName =="remD"){
+            yNote = yNote - 4*interLineSpace;
+        }
+        if (noteName == "em" || noteName =="mim"){
             yNote = yNote - 4.5*interLineSpace;
         }
-        if (noteName == "fM" || noteName =="faM"){
+        if (noteName == "fm" || noteName =="fam"){
             yNote = yNote - 5*interLineSpace;
         }
-        if (noteName == "gM" || noteName =="solM"){
+        if (noteName == "fmD" || noteName =="famD"){
+            yNote = yNote - 5*interLineSpace;
+        }
+        if (noteName == "gm" || noteName =="solm"){
             yNote = yNote - 5.5*interLineSpace;
         }
-        if (noteName == "aM" || noteName =="laM"){
+        if (noteName == "gmD" || noteName =="solmD"){
+            yNote = yNote - 5.5*interLineSpace;
+        }
+        if (noteName == "am" || noteName =="lam"){
             yNote = yNote - 6*interLineSpace;
         }
-        if (noteName == "bM" || noteName =="siM"){
+        if (noteName == "amD" || noteName =="lamD"){
+            yNote = yNote - 6*interLineSpace;
+        }
+        if (noteName == "bm" || noteName =="sim"){
             yNote = yNote - 6.5*interLineSpace;
         }
         rect = new QRectF(xNote,yNote , w*0.025 ,interLineSpace);
