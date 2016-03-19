@@ -4,11 +4,16 @@
 #include <QSlider>
 #include <QVector>
 #include <QCheckBox>
-
+#include <QPalette>
 char action[50]= "appuie sur touche";
 Piano::Piano(QWidget *parent) :
     QWidget(parent)
 {
+
+    QPalette Pal(palette());
+    Pal.setColor(QPalette::Background, QColor::fromRgb(240, 240, 240));
+    setAutoFillBackground(true);
+    setPalette(Pal);
 
     b_names_dip = false;
     b_racc_disp = false;
