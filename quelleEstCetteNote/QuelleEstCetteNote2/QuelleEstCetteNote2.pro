@@ -19,12 +19,14 @@ SOURCES += main.cpp\
     touche.cpp \
     portee.cpp \
     log.cpp \
+    notereader.cpp
 
 HEADERS  += mainwindow.h \
     note.h \
     piano.h \
     touche.h \
     portee.h \
+    notereader.h
 
 FORMS    += mainwindow.ui
 

@@ -26,5 +26,7 @@
         <file>son/solM.wav</file>
         <file>son/solmD.wav</file>
         <file>son/solMD.wav</file>
+        <file>part_fort_boyard</file>
+        <file>part_lettre_elise.txt</file>
     </qresource>
 </RCC>

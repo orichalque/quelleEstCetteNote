@@ -23,36 +23,8 @@ void Portee::paintEvent(QPaintEvent *event){
     QPainter p(this);
     vector<QString> notes;
     vector<note> notesToPlay;
-    notes.push_back("cm");
-    notes.push_back("dm");
-    notes.push_back("em");
-    notes.push_back("fm");
-    notes.push_back("gm");
-    notes.push_back("am");
-    notes.push_back("bm");
-    notes.push_back("cM");
-    notes.push_back("dM");
-    notes.push_back("eM");
-    notes.push_back("fM");
-    notes.push_back("gM");
-    notes.push_back("aM");
-    notes.push_back("bM");
-
-    notes.push_back("cm");
-    notes.push_back("dm");
-    notes.push_back("em");
-    notes.push_back("fm");
-    notes.push_back("gm");
-    notes.push_back("am");
-    notes.push_back("bm");
-    notes.push_back("cM");
-    notes.push_back("dM");
-    notes.push_back("eM");
-    notes.push_back("fM");
-    notes.push_back("gM");
-    notes.push_back("aM");
-    notes.push_back("bM");
-
+    NoteReader notereader;
+    notes = notereader.readNotes(":/new/prefix1/part_lettre_elise.txt");
     int w = width();
     int h = height();
 
