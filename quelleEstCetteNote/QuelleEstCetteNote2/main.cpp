@@ -1,5 +1,5 @@
-#include "mainwindow.h"
-#include <QSpacerItem>
+//#include "mainwindow.h"
+//#include <QSpacerItem>
 #include <iostream>
 #include <QApplication>
 #include "piano.h"
