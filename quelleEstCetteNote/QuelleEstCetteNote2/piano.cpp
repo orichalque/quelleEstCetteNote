@@ -169,6 +169,7 @@ Piano::Piano(QWidget *parent) :
 }
 
 void Piano::checking(bool checked){
+    log("L'utilisateur"," affiche les options");
     int sizeT= 38;
 
     int nT =3;
@@ -194,6 +195,7 @@ void Piano::checking(bool checked){
             }
 
     }else{
+        log("L'utilisateur","cache les options / agrandit le piano");
         sizeT= 56;
 
         nT =0;
@@ -228,6 +230,7 @@ void Piano::display_racc(){
             }else{
 
             }*/
+            log("L'utilisateur","cache les raccourcis");
             auto rac = t->getRacc(); //sauvegarde du raccourci qui change sinon
             t->setText("");
             t->setShortcut(rac);
@@ -235,6 +238,7 @@ void Piano::display_racc(){
            /* if(b_names_dip){
 
             }else{*/
+            log("L'utilisateur","affiche les raccourcis");
                 auto rac = t->getRacc(); //sauvegarde du raccourci qui change sinon
                 t->setText(t->getRacc());
                 t->setShortcut(rac);
@@ -265,6 +269,7 @@ void Piano::display_names(){
             }else{
 
             }*/
+            log("L'utilisateur","cache le nom des notes");
             auto rac = t->getRacc(); //sauvegarde du raccourci qui change sinon
             t->setText("");
             t->setShortcut(rac);
@@ -272,6 +277,7 @@ void Piano::display_names(){
             /*if(b_names_dip){
 
             }else{*/
+            log("L'utilisateur","affiche le nom des notes");
                auto rac = t->getRacc(); //sauvegarde du raccourci qui change sinon
                t->setText(t->getNote());
                t->setShortcut(rac);

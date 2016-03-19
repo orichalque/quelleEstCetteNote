@@ -23,8 +23,9 @@ int main(int argc, char *argv[])
     w.setAutoFillBackground(true);
     w.setPalette(Pal);
 
-    Piano *pi = new Piano(&w);
+
     Portee *po = new Portee(&w);
+     Piano *pi = new Piano(&w);
   /*  QHBoxLayout qhblupper;
     qhblupper.addSpacing(1);
     qhblupper.addWidget(po);
