@@ -212,6 +212,11 @@ void Portee::paintEvent(QPaintEvent *event){
             mid = true;
             diese = true;
         } else
+        if (noteName == "bM" || noteName =="simD"){
+            yNote = yNote - 6.5*interLineSpace;
+            down = true;
+            diese = true;
+        }
 
         if (down == true){
             p.drawImage(xNote, yNote, blackD);
@@ -226,9 +231,6 @@ void Portee::paintEvent(QPaintEvent *event){
         if (diese) {
             p.drawImage(xNote, yNote, blackDiese);
         }
-
-
-
         xNote = xNote + 0.045*w;
 
         nbOfNotesDrawn ++;
