@@ -9,7 +9,7 @@ char action[50]= "appuie sur touche";
 Piano::Piano(QWidget *parent) :
     QWidget(parent)
 {
-
+    init_log();
     QPalette Pal(palette());
     Pal.setColor(QPalette::Background, QColor::fromRgb(240, 240, 240));
     setAutoFillBackground(true);
