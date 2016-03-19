@@ -3,6 +3,7 @@
 #include <QVBoxLayout>
 #include <QSlider>
 #include <QVector>
+#include <iostream>
 #include <QCheckBox>
 #include <QPalette>
 char action[50]= "appuie sur touche";
@@ -175,6 +176,8 @@ Piano::Piano(QWidget *parent) :
      QObject::connect(checkB, SIGNAL(toggled(bool)), this, SLOT(checking(bool)));
      QObject::connect(retour, SIGNAL(clicked()), this, SLOT(retour_arriere()));
 
+
+
 }
 
 void Piano::retour_arriere(){
@@ -182,7 +185,9 @@ void Piano::retour_arriere(){
     if(notes_jouees->size()>0){
         QSound::play(":/new/prefix1/son/back.wav");
         notes_jouees->removeLast();
+        emit(played());
     }
+
 }
 
 QVector<bool>* Piano::comparaison(QVector<QString> *partition){
@@ -345,43 +350,51 @@ void Piano::display_names(){
      notes_jouees->append(QString("dom"));
      char action2[50]=  "do mineur";
      log(action,action2);
+     emit played();
  }
  void Piano::play_rem(){
      QSound::play(":/new/prefix1/son/rem.wav");
      notes_jouees->append(QString("rem"));
      char action2[50]=  "re mineur";
      log(action,action2);
+     emit played();
  }
  void Piano::play_mim(){
      QSound::play(":/new/prefix1/son/mim.wav");
      notes_jouees->append(QString("mim"));
      char action2[50]=  "mi mineur";
      log(action,action2);
+     emit played();
  }
  void Piano::play_fam(){
      QSound::play(":/new/prefix1/son/fam.wav");
      notes_jouees->append(QString("fam"));
      char action2[50]=  "fa mineur";
      log(action,action2);
+     emit played();
  }
  void Piano::play_solm(){
      QSound::play(":/new/prefix1/son/solm.wav");
      notes_jouees->append(QString("solm"));
      char action2[50]=  "sol mineur";
      log(action,action2);
+     emit played();
  }
  void Piano::play_lam(){
      QSound::play(":/new/prefix1/son/lam.wav");
      notes_jouees->append(QString("lam"));
      char action2[50]=  "la mineur";
      log(action,action2);
+     emit played();
  }
  void Piano::play_sim(){
      QSound::play(":/new/prefix1/son/sim.wav");
      notes_jouees->append(QString("sim"));
      char action2[50]=  "si mineur";
      log(action,action2);
+     emit played();
  }
+
 
 
  void Piano::play_doM(){
@@ -389,42 +402,49 @@ void Piano::display_names(){
      notes_jouees->append(QString("doM"));
      char action2[50]=  "do Majeur";
      log(action,action2);
+     emit played();
  }
  void Piano::play_reM(){
      QSound::play(":/new/prefix1/son/reM.wav");
      notes_jouees->append(QString("reM"));
      char action2[50]=  "re Majeur";
      log(action,action2);
+     emit played();
  }
  void Piano::play_miM(){
      QSound::play(":/new/prefix1/son/miM.wav");
      notes_jouees->append(QString("miM"));
      char action2[50]=  "mi Majeur";
      log(action,action2);
+     emit played();
  }
  void Piano::play_faM(){
      QSound::play(":/new/prefix1/son/faM.wav");
      notes_jouees->append(QString("faM"));
      char action2[50]=  "fa Majeur";
      log(action,action2);
+     emit played();
  }
  void Piano::play_solM(){
      QSound::play(":/new/prefix1/son/solM.wav");
      notes_jouees->append(QString("solM"));
      char action2[50]=  "sol Majeur";
      log(action,action2);
+     emit played();
  }
  void Piano::play_laM(){
      QSound::play(":/new/prefix1/son/laM.wav");
      notes_jouees->append(QString("laM"));
      char action2[50]=  "la Majeur";
      log(action,action2);
+     emit played();
  }
  void Piano::play_siM(){
      QSound::play(":/new/prefix1/son/siM.wav");
      notes_jouees->append(QString("siM"));
      char action2[50]=  "si Majeur";
      log(action,action2);
+     emit played();
  }
 
  void Piano::play_domD(){
@@ -432,30 +452,35 @@ void Piano::display_names(){
      notes_jouees->append(QString("domD"));
      char action2[50]=  "do# mineur";
      log(action,action2);
+     emit played();
  }
  void Piano::play_remD(){
      QSound::play(":/new/prefix1/son/remD.wav");
      notes_jouees->append(QString("remD"));
      char action2[50]=  "re# mineur";
      log(action,action2);
+     emit played();
  }
  void Piano::play_famD(){
      QSound::play(":/new/prefix1/son/famD.wav");
      notes_jouees->append(QString("famD"));
      char action2[50]=  "fa# mineur";
      log(action,action2);
+     emit played();
  }
  void Piano::play_solmD(){
      QSound::play(":/new/prefix1/son/solmD.wav");
      notes_jouees->append(QString("solmD"));
      char action2[50]=  "sol# mineur";
      log(action,action2);
+     emit played();
  }
  void Piano::play_lamD(){
      QSound::play(":/new/prefix1/son/lamD.wav");
      notes_jouees->append(QString("lamD"));
      char action2[50]=  "la# mineur";
      log(action,action2);
+     emit played();
  }
 
  void Piano::play_doMD(){
@@ -463,30 +488,35 @@ void Piano::display_names(){
      notes_jouees->append(QString("doMD"));
      char action2[50]=  "do# Majeur";
      log(action,action2);
+     emit played();
  }
  void Piano::play_reMD(){
      QSound::play(":/new/prefix1/son/reMD.wav");
      notes_jouees->append(QString("reMD"));
      char action2[50]=  "re# Majeur";
      log(action,action2);
+     emit played();
  }
  void Piano::play_faMD(){
      QSound::play(":/new/prefix1/son/faMD.wav");
      notes_jouees->append(QString("faMD"));
      char action2[50]=  "fa# Majeur";
      log(action,action2);
+     emit played();
  }
  void Piano::play_solMD(){
      QSound::play(":/new/prefix1/son/solMD.wav");
      notes_jouees->append(QString("solMD"));
      char action2[50]=  "sol# Majeur";
      log(action,action2);
+     emit played();
  }
  void Piano::play_laMD(){
      QSound::play(":/new/prefix1/son/laMD.wav");
      notes_jouees->append(QString("laMD"));
      char action2[50]=  "la# Majeur";
      log(action,action2);
+     emit played();
  }
 
 

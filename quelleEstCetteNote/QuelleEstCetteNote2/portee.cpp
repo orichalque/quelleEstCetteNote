@@ -16,11 +16,21 @@ Portee::Portee(QWidget *parent) :
     QWidget(parent)
 {
     setFixedSize(780, 490);
+
+}
+
+void Portee::refresh(){
+    cout << "Signal received" << endl;
+    //this -> repaint();
 }
 
 void Portee::setPiano(Piano* p){
     piano = p;
+
+    QObject::connect(piano, SIGNAL(played()), this, SLOT(update()));
 }
+
+
 
 void Portee::paintEvent(QPaintEvent *event){
     QWidget::paintEvent(event);
@@ -100,13 +110,15 @@ void Portee::paintEvent(QPaintEvent *event){
     for (auto noteName : notes){
         up = down = mid = diese = false;
         yNote = 0.118*h + (((0.275*h)*(floor(nbOfNotesDrawn/14)))); //Modulo le nombre de portées ! //TODO
-        cout << yNote << endl;
         if (nbOfNotesDrawn % 14 == 0 && nbOfNotesDrawn > 0){
             xNote = 0.22*w;
         }
 
-        //if (this->piano->note_)
-        p.drawLine(xNote, yNote, xNote , yNote + 5*interLineSpace);
+        if (this -> piano != NULL && this->piano->notes_jouees->size()== nbOfNotesDrawn){
+            cout<< "ON DESSINE" << endl;
+            p.drawLine(xNote, yNote, xNote , yNote + 5*interLineSpace);
+        }
+
         /* NOTE CLASSIQUE */
         if (noteName == "cm" || noteName =="doM"){
             //yNote immobile
@@ -231,8 +243,9 @@ void Portee::paintEvent(QPaintEvent *event){
         if (diese) {
             p.drawImage(xNote, yNote, blackDiese);
         }
-        xNote = xNote + 0.045*w;
 
+
+        xNote = xNote + 0.045*w;
         nbOfNotesDrawn ++;
     }
 
@@ -248,3 +261,6 @@ void Portee::paintEvent(QPaintEvent *event){
     qDebug() << str;
  */
 }
+
+
+
