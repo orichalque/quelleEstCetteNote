@@ -153,9 +153,23 @@ Il y a deux critères pour l'évaluer:
 En plus, le personnage accompagnateur émet une petite remarque ayant pour but d'aider l'utilisateur à s'améliorer.
 Par exemple, si l'utilisateur met plus de temps à trouver les notes en ``#'' ou ``b-mol'', le personnage lui conseillera de les réviser.
 \subsection{Progression}
+En plus de la note de fin de session, les utilisateurs peuvent être intéressés par la progression de leurs notes et de leurs vitesse
+de jeu. Il est donc intéressant de stocker un historique des scores, mais cette historique n'est pas consulté régulièrement, il ne 
+faut donc pas que cette commande soit accessible directement sur l'écran principal et pollue l'espace.
 \subsection{Choix de partitions}
+Pour juger efficacement de l'évolution de l'utilisateur, il faut qu'il ait accès à un grand nombre de partitions, il ne faut donc 
+pas les enregistrer ``en dur'' dans le programme, mais pouvoir les charger à partir d'un fichier ou autre. Cette commande étant utilisée
+ souvent (enfin normalement), on peut la représenté par un petit ``+'' discret en haut a gauche de la partition.
+ Bien sûr, cette commande est également présente dans le menu ``fichier->ouvrir'' pour les habitués aux logiciels de bureau.
+ Il serait intéressant de tenir à jour un site qui repertorie de nombreuses partitions simples.
 \subsection{Aide pour les débutants}
-bouton ``solutions''
+\subsubsection{Aide note apres note}
+Et pour les tout débutants en solfège? Qui n'ont eu aucun cours sur le solfège ? Il faudrait pouvoir les aider lorsqu'ils sont 
+vraiment bloqués dans l'ignorance. De ce fait, l'ajout d'un bouton qui donnerait indiquerait sur quelle touche appuyer.
+Appeler cette touche ``solution'' est assez signifiant. ``Aide débutant'' étant plus vague et plus long.
+\subsubsection{Partition modèle}
+Il est aussi plus simple, pour quelqu'un qui n'a pas suivi un seul cours de solfège, d'avoir la possibilité d'avoir sous les yeux une
+partitions avec toutes les notes des deux gammes du logiciel et leurs nom correspondant juste en dessous.
 \subsection{Tutoriel au premier lancement}
 Avec un personnage professeur accompagnant, pas trop humain.
 
@@ -166,7 +180,7 @@ genre le mec il a mit longtps a trouvé tel note (difftime) ou bien il se trompe
 
 
 \section{Paper Prototype}
-
+essai -> bouton correction inutile !!!
 \section{Test du logiciel par des cobayes}
 \section{Conclusion}
 amélioration traduction des notes: donc passage qwerty aussi.

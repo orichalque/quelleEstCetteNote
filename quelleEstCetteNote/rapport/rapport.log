@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.1.25)  20 MAR 2016 17:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.1.25)  20 MAR 2016 22:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -486,6 +486,18 @@ I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
+
+Overfull \hbox (1.33209pt too wide) in paragraph at lines 156--159
+\T1/cmr/m/n/10 régulièrement, il ne faut donc pas que cette commande soit acces
+sible directement
+ []
+
+
+Overfull \hbox (13.30139pt too wide) in paragraph at lines 167--170
+\T1/cmr/m/n/10 touche appuyer. Appeler cette touche ``solution'' est assez sign
+ifiant. ``Aide débutant''
+ []
+
 [6] [7] (./rapport.aux) ) 
 Here is how much of TeX's memory you used:
  3193 strings out of 495000
@@ -505,9 +517,9 @@ nnisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/dennisman
 -var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/dennisman/.texmf-var/fo
 nts/pk/ljfour/jknappen/ec/eccc1728.600pk> </home/dennisman/.texmf-var/fonts/pk/
 ljfour/jknappen/ec/ecrm1728.600pk>
-Output written on rapport.pdf (7 pages, 169765 bytes).
+Output written on rapport.pdf (7 pages, 173393 bytes).
 PDF statistics:
- 367 PDF objects out of 1000 (max. 8388607)
+ 374 PDF objects out of 1000 (max. 8388607)
  58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)

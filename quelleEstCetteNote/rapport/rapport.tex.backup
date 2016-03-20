@@ -112,15 +112,58 @@ de pouvoir la jouer avec le clavier, comme un musicien aurait fait avec un vrai 
 \subsection{Affichage des raccourcis}
 Si chaque touche du piano correspond à une touche du clavier, il serait judicieux d'indiquer à l'utilisateur quelles sont les touches
 qui sont associées. Et ceci sans avoir à afficher les bulles d'informations les unes après les autres. Nous avons donc décidé d'implémenter
-un moyen d'afficher 
+un moyen d'afficher sur chacune des notes, son raccourci clavier. Cette fonction est lancé par un bouton situé à proximité du piano, ce qui
+est évident puisque la fonction agit sur le piano (principe de chépakoi).
+Ce bouton est réprésenté par un clavier, ce qui est assez parlant pour un utilisateur qui aurait envie d'utiliser son clavier 
+pour jouer du piano.
+Bien sûr, au cas où, une bulle d'information indique ce que fait ce bouton si un utilisateur moins futé se posait la question.
 \subsection{Affichage du nom des notes}
+De façon similaire, nous avons décidé d'implémenter une fonction indiquant la note de chaque touche. Le bouton qui la lance est lui 
+aussi proche du piano. Par soucis de symétrie (et donc de confort visuel des utilisateurs), il est situé de l'autre coté de son semblable.
+\'A quoi doit ressembler ce bouton: un petit dessin de clé de sol, avec les notes ``do re mi'' écrites est assez communiquant puisque
+l'utilisateur peut voir le nom des trois premières notes sur ce bouton. Bien sur si ce n'est pas assez évident, le bulle d'information
+est là.
+Une question se pose alors : est-il possible d'afficher les raccourcis et les notes en même temps.
+Oui, pourquoi pas après tout, si l'utilisateur en a envie, il ne faut pas l'en empêcher. Et ceci est tout à fait justifié si 
+l'utilisateur débute avec le logiciel et le piano.
+Cependant, nous n'avons pas pu l'implémenter sur notre programme car nous n'avons pas réussi à tout faire tenir sur la largeur de la touche
+tout en étant lisible, ni à écrire sur plusieurs lignes dans la touche. Le temps qui nous était imparti étant assez court.
 \subsection{Masquer les options}
+\subsubsection{Pollution visuelle}
+Certains utilisateurs, sûrement une majorité, une fois qu'ils seront familiers avec les notes et les raccourcis, ne voudront plus 
+être embêtés par ces deux boutons qui ne leurs sont plus d'aucune utilité, nous avons donc décidé de pouvoir les cacher en décochant
+une option.
+\subsubsection{Optimisation de l'espace}
+Ces deux boutons disparus, il reste de la place innocupée de chaque coté du piano, il est donc judicieux d'augmenter la taille 
+du piano en conséquence, ce qui donne un meilleur confort visuel.
 
+\subsubsection{Nom}
+Cette fonction permettant d'améliorer l'espace de saisie des notes doit avoir un nom, pour indiquer à l'utilisateur ce qu'il va se 
+passer. Le terme ``options d'affichage'' est plutôt parlant et à proximité du piano, il est probable que les options concernent le 
+piano.
+Le terme ``options'' lui est plus court mais il est moins précis. Quelles sont ces options ? Des touches supplémentaires ?
 \subsection{Note de fin de session}
+Le logiciel ayant un but éducatif, il faut donc évaluer l'utilisateur afin de determiner son niveau de connaissance.
+Il y a deux critères pour l'évaluer:
+\begin{itemize}
+ \item Le nombre de bonnes réponses (en pourcentage)
+ \item La vitesse à laquelle il a pu lire la partition
+\end{itemize}
+\'A la fin de chaque test (=partition), le récapitulatif de ces deux points est affiché accompgné d'une appréciation.
+En plus, le personnage accompagnateur émet une petite remarque ayant pour but d'aider l'utilisateur à s'améliorer.
+Par exemple, si l'utilisateur met plus de temps à trouver les notes en ``#'' ou ``b-mol'', le personnage lui conseillera de les réviser.
 \subsection{Progression}
+En plus de la note de fin de session, les utilisateurs peuvent être intéressés par la progression de leurs notes et de leurs vitesse
+de jeu. Il est donc intéressant de stocker un historique des scores, mais cette historique n'est pas consulté régulièrement, il ne 
+faut donc pas que cette commande soit accessible directement sur l'écran principal et pollue l'espace.
 \subsection{Choix de partitions}
+Pour juger efficacement de l'évolution de l'utilisateur, il faut qu'il ait accès à un grand nombre de partitions, il ne faut donc 
+pas les enregistrer ``en dur'' dans le programme, mais pouvoir les charger à partir d'un fichier ou autre. Cette commande étant utilisée
+ souvent (enfin normalement), on peut la représenté par un petit ``+'' discret en haut a gauche de la partition.
+ Bien sûr, cette commande est également présente dans le menu ``fichier->ouvrir'' pour les habitués aux logiciels de bureau.
+ Il serait intéressant de tenir à jour un site qui repertorie de nombreuses partitions simples.
 \subsection{Aide pour les débutants}
-bouton ``solutions''
+Et pour les tout débutants en solfège? Qui n'ont eu aucun cours sur le solfège ? Il leur faudrait bouton ``solutions''
 \subsection{Tutoriel au premier lancement}
 Avec un personnage professeur accompagnant, pas trop humain.
 
@@ -131,7 +174,7 @@ genre le mec il a mit longtps a trouvé tel note (difftime) ou bien il se trompe
 
 
 \section{Paper Prototype}
-
+essai -> bouton correction inutile !!!
 \section{Test du logiciel par des cobayes}
 \section{Conclusion}
 amélioration traduction des notes: donc passage qwerty aussi.
