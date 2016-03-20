@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.1.25)  20 MAR 2016 15:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.1.25)  20 MAR 2016 17:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -477,29 +477,38 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4] [5] [6] (./rapport.aux) ) 
+[4] [5]
+! You can't use `macro parameter character #' in horizontal mode.
+l.154 ...plus de temps à trouver les notes en ``#
+                                                  '' ou ``b-mol'', le person...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+[6] [7] (./rapport.aux) ) 
 Here is how much of TeX's memory you used:
  3193 strings out of 495000
  42813 string characters out of 6181169
- 103826 words of memory out of 5000000
+ 105826 words of memory out of 5000000
  6378 multiletter control sequences out of 15000+600000
  14247 words of font info for 34 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  37i,10n,43p,240b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/dennisman/.texmf-var/fonts/pk/ljfour/jknap
-pen/ec/ectt1000.600pk> </home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/
-ecbx1200.600pk> </home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx100
-0.600pk> </home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk
-> </home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1000.600pk> </hom
-e/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/denni
-sman/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/dennisman/.t
-exmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/dennisman/.texmf-va
-r/fonts/pk/ljfour/jknappen/ec/eccc1728.600pk> </home/dennisman/.texmf-var/fonts
-/pk/ljfour/jknappen/ec/ecrm1728.600pk>
-Output written on rapport.pdf (6 pages, 167530 bytes).
+ </home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/
+ec/ectt1000.600pk> </home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx
+1200.600pk> </home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.60
+0pk> </home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </
+home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1000.600pk> </home/de
+nnisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/dennisman
+/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/dennisman/.texmf
+-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/dennisman/.texmf-var/fo
+nts/pk/ljfour/jknappen/ec/eccc1728.600pk> </home/dennisman/.texmf-var/fonts/pk/
+ljfour/jknappen/ec/ecrm1728.600pk>
+Output written on rapport.pdf (7 pages, 169765 bytes).
 PDF statistics:
- 359 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 367 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
