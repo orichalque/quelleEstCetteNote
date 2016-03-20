@@ -34,5 +34,6 @@
         <file>black_middleLine.png</file>
         <file>black_upLine.png</file>
         <file>black_diese.png</file>
+        <file>son/back.wav</file>
     </qresource>
 </RCC>
