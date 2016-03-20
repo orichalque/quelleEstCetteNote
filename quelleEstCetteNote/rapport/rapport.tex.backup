@@ -152,6 +152,7 @@ Il y a deux critères pour l'évaluer:
 \'A la fin de chaque test (=partition), le récapitulatif de ces deux points est affiché accompgné d'une appréciation.
 En plus, le personnage accompagnateur émet une petite remarque ayant pour but d'aider l'utilisateur à s'améliorer.
 Par exemple, si l'utilisateur met plus de temps à trouver les notes en ``#'' ou ``b-mol'', le personnage lui conseillera de les réviser.
+Pour implémenter ceci, nous nous servons de différents fichiers de log.
 \subsection{Progression}
 En plus de la note de fin de session, les utilisateurs peuvent être intéressés par la progression de leurs notes et de leurs vitesse
 de jeu. Il est donc intéressant de stocker un historique des scores, mais cette historique n'est pas consulté régulièrement, il ne 
@@ -163,19 +164,51 @@ pas les enregistrer ``en dur'' dans le programme, mais pouvoir les charger à pa
  Bien sûr, cette commande est également présente dans le menu ``fichier->ouvrir'' pour les habitués aux logiciels de bureau.
  Il serait intéressant de tenir à jour un site qui repertorie de nombreuses partitions simples.
 \subsection{Aide pour les débutants}
-Et pour les tout débutants en solfège? Qui n'ont eu aucun cours sur le solfège ? Il leur faudrait bouton ``solutions''
+\subsubsection{Aide note apres note}
+Et pour les tout débutants en solfège? Qui n'ont eu aucun cours sur le solfège ? Il faudrait pouvoir les aider lorsqu'ils sont 
+vraiment bloqués dans l'ignorance. De ce fait, l'ajout d'un bouton qui donnerait indiquerait sur quelle touche appuyer.
+Appeler cette touche ``solution'' est assez signifiant. ``Aide débutant'' étant plus vague et plus long.
+\subsubsection{Partition modèle}
+Il est aussi plus simple, pour quelqu'un qui n'a pas suivi un seul cours de solfège, d'avoir la possibilité d'avoir sous les yeux une
+partitions avec toutes les notes des deux gammes du logiciel et leurs nom correspondant juste en dessous.
 \subsection{Tutoriel au premier lancement}
-Avec un personnage professeur accompagnant, pas trop humain.
+Afin que l'utilisateur prenne parfaitement en main le logiciel, surtout les plus jeunes. Nous avons décidé (suite à un test sur cobaye n°1),
+de lancer un petit tutoriel lors du premier démarrage. Ce tutoriel sérait dirigé par un personnage professeur accompagnant,
+pas trop humain, un robot ou une note de musique vivante, c'est en tout cas ce qui ressort dans nos sondages.
+Il expliquerait rapidement le but du programme, comment l'utiliser et comment avoir de l'aide en cas de besoin.
+Ce serait aussi ce personnage qui donnerait les conseils et remarque à la fin de chaque test.
 
-\subsection{Différents logs pour différentes analyses = Compte rendu du jeu}
-genre le mec il a mit longtps a trouvé tel note (difftime) ou bien il se trompe souvent pour telle autre note.
 
 
 
 
 \section{Paper Prototype}
-essai -> bouton correction inutile !!!
+\subsection{Lien}
+\subsection{Essais et conséquences}
+Suite à un essai du paper prototype par un des cobaye, ce dernier nous a fait remarquer que le bouton de correction ( présent dans la video )
+est inutile puisque la correction est immédiatement lancée automatiquement lorsque le musicien en herbe joue sa dernière note. Et 
+quel ``ahuri'' aurait l'idée de se faire évaluer sans avoir joué toutes ses notes!?
+En effet, ce bouton semble bien inutile, nous avons donc décidé de le retirer.
 \section{Test du logiciel par des cobayes}
+\subsection{Cobaye n°1: Johnna, 6ans1/2, CP}
+
+\begin{itemize}
+\item \'A l'époque le logiciel n'avait pas de tutoriel. Le cobaye n'avait pas vraiment d'idée de ce qui allait se passer en cochant les 
+options d'affichages. Mais une fois cliqué, il comprit.
+\item Bouton ``do re mi'': le cobaye pensait que ce bouton allait lui jouer les notes do, ré et mi.
+\item Le bouton permettant d'afficher les raccourcis clavier et celui pour donner la solution font parfaitement ce à quoi s'attendait
+le cobaye.
+\item Partition: le cobaye ne comprend pas vraiment la partition, l'intérêt de celle-ci
+\end{itemize}
+
+C'est ici que l'idée du tutoriel nous vient, il permettrait donc à se cobaye de savoir ce que font les boutons dont il ne savait pas
+l'action et de le guider sur les partitions.
+
+\subsection{Cobaye n°2:}
+
+curs
+
+
 \section{Conclusion}
 amélioration traduction des notes: donc passage qwerty aussi.
 \end{document}

@@ -22,11 +22,14 @@
 \contentsline {subsection}{\numberline {2.9}Note de fin de session}{6}
 \contentsline {subsection}{\numberline {2.10}Progression}{6}
 \contentsline {subsection}{\numberline {2.11}Choix de partitions}{6}
-\contentsline {subsection}{\numberline {2.12}Aide pour les d\IeC {\'e}butants}{6}
-\contentsline {subsubsection}{\numberline {2.12.1}Aide note apres note}{6}
+\contentsline {subsection}{\numberline {2.12}Aide pour les d\IeC {\'e}butants}{7}
+\contentsline {subsubsection}{\numberline {2.12.1}Aide note apres note}{7}
 \contentsline {subsubsection}{\numberline {2.12.2}Partition mod\IeC {\`e}le}{7}
 \contentsline {subsection}{\numberline {2.13}Tutoriel au premier lancement}{7}
-\contentsline {subsection}{\numberline {2.14}Diff\IeC {\'e}rents logs pour diff\IeC {\'e}rentes analyses = Compte rendu du jeu}{7}
 \contentsline {section}{\numberline {3}Paper Prototype}{7}
+\contentsline {subsection}{\numberline {3.1}Lien}{7}
+\contentsline {subsection}{\numberline {3.2}Essais et cons\IeC {\'e}quences}{7}
 \contentsline {section}{\numberline {4}Test du logiciel par des cobayes}{7}
-\contentsline {section}{\numberline {5}Conclusion}{7}
+\contentsline {subsection}{\numberline {4.1}Cobaye n\GenericError {(inputenc) }{Package inputenc Error: Unicode char \u 8:° not set up for use with LaTeX}{See the inputenc package documentation for explanation.}{Your command was ignored.\MessageBreak Type I <command> <return> to replace it with another command,\MessageBreak or <return> to continue without it.}1: Johnna, 6ans1/2, CP}{7}
+\contentsline {subsection}{\numberline {4.2}Cobaye n\GenericError {(inputenc) }{Package inputenc Error: Unicode char \u 8:° not set up for use with LaTeX}{See the inputenc package documentation for explanation.}{Your command was ignored.\MessageBreak Type I <command> <return> to replace it with another command,\MessageBreak or <return> to continue without it.}2:Charline}{8}
+\contentsline {section}{\numberline {5}Conclusion}{8}
