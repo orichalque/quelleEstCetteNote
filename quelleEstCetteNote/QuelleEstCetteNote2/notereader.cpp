@@ -19,7 +19,6 @@ vector<QString> NoteReader::readNotes(QString fileName){
    while (!in.atEnd())
    {
       QString line = in.readLine(); //read one line at a time
-      cout << line.toStdString() << endl;
       if (line != "\n"){
         notes.push_back(line);
       }

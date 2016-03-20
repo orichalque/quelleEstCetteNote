@@ -25,7 +25,9 @@ int main(int argc, char *argv[])
 
 
     Portee *po = new Portee(&w);
-     Piano *pi = new Piano(&w);
+    Piano *pi = new Piano(&w);
+    po->setPiano(pi);
+
   /*  QHBoxLayout qhblupper;
     qhblupper.addSpacing(1);
     qhblupper.addWidget(po);
@@ -40,6 +42,7 @@ int main(int argc, char *argv[])
 
 
     w.setLayout(&qvbox);
+
     //MainWindow w;
     w.show();
 

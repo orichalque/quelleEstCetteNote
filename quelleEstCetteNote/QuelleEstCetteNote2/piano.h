@@ -17,6 +17,8 @@ public:
     QVector<bool>* comparaison(QVector<QString> *partition);
 
 signals:
+    void played();
+
 private:
     QVector<Touche*> *notes;
     bool b_racc_disp;

@@ -10,10 +10,14 @@ public:
     Portee();
     explicit Portee(QWidget *parent = 0);
     void setPiano(Piano* p);
-
-protected:
-    void paintEvent(QPaintEvent * event);
     Piano* piano;
+    void paintEvent(QPaintEvent * event);
+protected:
+
+
+
+public slots:
+    void refresh();
 };
 
 #endif // PORTEE_H
