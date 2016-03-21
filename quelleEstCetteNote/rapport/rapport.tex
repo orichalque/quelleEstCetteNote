@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{float}
+\usepackage{hyperref}
 
 \pagestyle{fancy}
 \title{Projet d'interface Homme-Machine : \bsc{Quelle Est Cette Note}}
@@ -45,12 +46,13 @@
 
 \vspace{1cm}
 
-\subsection{Problématique et but du projet}
+\subsection{Motivation et but du projet}
 
 \vspace{1cm}
+Pourquoi apprendre le solfège ? Afin d'éviter des catastrophes auditives comme le  \href{https://www.youtube.com/watch?feature=player_detailpage&v=KolfEhV-KiA#t=18}{thème de titanic par Marc Mulholland}.
 
 L'idée est de réaliser un petit logiciel pour initier les débutants au solfège. Il fallait donc au départ restreindre le programme,
-le domaine de la musique étant assez vaste. Il a donc été décidé collégiallement que le programme aurait un niveau assez faible et 
+le domaine de la musique étant assez vaste. Il a donc été décidé collégialement que le programme aurait un niveau assez faible et 
 simple, niveau 6e en musique.
 
 
@@ -62,7 +64,7 @@ Il faut donc que l'utilisateur sache lire une partition simple en clef de sol, l
 
 L'outil choisi pour entrer les notes est un clavier de piano. Le piano étant un instrument universel en musique.
 
-Il a également été décidé de représenter les \verb # 
+Il a également été décidé de représenter les \#
 { }et les b-mol, ceux-ci étant présent dans de très nombreuses partitions, il est donc
 important pour un débutant d'en prendre connaissance.
 
@@ -77,19 +79,46 @@ important pour un débutant d'en prendre connaissance.
 \newpage
 \section{Différents éléments de l'interface}
 
-
-
 \subsection{Portée}
+\subsubsection{Variabilité de la portée}
+Le but de notre application étant d'apprendre à lire une partition, il va de soi que notre logiciel devait contenir une portée de notes. 
+Nous voulions pouvoir efficacement des portées de moins d'une dizaine de lignes, et des portées plus longues. Si bien que notre application adapte son affichage au nombre de notes. Arbitrairement, nous avons fixé le nombre de notes par ligne à 14. Nous estimons que c'est un juste milieu entre une portée trop pleine, et une portée trop vide.
+\subsubsection{Clef de sol \& Notes}
+Le placement des notes et de la clef de sol dans la portée pouvait se faire de deux manières différentes avec \emph{Qt} : En dessinant les notes, ou en insérant des images. Nous avons tout d'abord choisi d'insérer la clef de Sol au début de la portée, car il aurait été impossible d'en dessiner une d'une manière propre. Ensuite nous avons commencé en dessinant les notes. Enfin nous avons vite changé d'avis, et inséré des images à la place, la variété des notes (Couleur, Dièse, normale, barrées ...) rendait le code illisible. L'insertion d'images nous a paru bien plus évidente, en plus d'être graphiquement plus agréable. 
+\subsubsection{Curseur de suivi}
+Afin de simplifier la lecture des notes par l'utilisateur, nous avons ajouté un curseur de lecture sur la portée. Il se présente sous la forme d'une barre verticale, de largeur 2px, et se positionne avant la prochaine note à jouer. A chaque note jouée, le curseur avance d'une note, ou bien recule d'une note si l'utilisateur annule sa dernière entrée. 
+\begin{center}
+\includegraphics[width = 125px]{./images/scroller.png}
+\end{center}
+\subsubsection{Correction}
+Lorsque l'utilisateur entre la dernière note de la portée, la correction débute automatiquement. Toutes les notes sont redessinées dans un vert léger, et volontairement non-agressif. Ensuite les entrées de l'utilisateur sont analysées. Chaque note est comparée à la partition. Lorsque la note est bien jouée, la note verte est donc simplement présente. Lorsque l'utilisateur s'est trompé, on place une note rouge correspondant à celle qu'il a joué, et une verte là où il aurait dû jouer. Ainsi il peut comprendre ses erreurs, et éventuellement recommencer en évitant de faire les mêmes erreurs. 
+\begin{center}
+\includegraphics[width = 125px]{./images/correct.png}
+\end{center}
 \subsection{Menu}
+Afin de naviguer dans notre application nous avons implémenté une barre d'outils. Cette barre propose 2 onglets, le premier, "Fichier", contient:
+
+\begin{itemize}
+\item Ouvrir un fichier, ou bien CTRL+O pour les utilisateurs de raccourcis, ouvre un fichier contenant une partition et l'affiche sur la portée. L'utilisateur peut ensuite la jouer.
+\item Jouer en mode libre, qui permet de n'utiliser aucune partition, et de jouer librement du piano. Pour composer, par exemple.
+\item Historique des scores, afin d'afficher sa progression, notamment au niveau des temps de réalisation, ainsi que des pourcentages de réussite.
+\item Quitter, ou CTRL+Q, afin de fermer l'application. 
+\end{itemize}
+\begin{center}
+\includegraphics[width = 125px]{./images/toolBar.png}
+\end{center}
+Néanmoins suite à un problème d'implémentation nous avons fait un second onglet, "Partition", qui permet de choisir la partition dans un menu déroulant. Cependant, l'ouverture de partition étant constamment répétée, nous avons rapidement remarqué qu'un onglet de la barre d'outil destiné à cet effet était extrêmement plaisant. 
+
+Finalement nous avons même ajouté un bouton \emph{+} en haut à gauche, accélérant d'autant plus l'accès au choix de partition. 
 
 \subsection{Couleur de fond}
 Nous avons choisit de mettre le fond en blanc, le blanc rendant la portée plus visible.
-Le l'arrière plan du piano est quant à lui légerement grisé pour faire une petite séparation entre la partition et le 
+Le l'arrière plan du piano est quant à lui légèrement grisé pour faire une petite séparation entre la partition et le 
 ``groupe utilisateur'' (piano + boutons).
 \subsection{Piano}
 \subsubsection{Pourquoi le Piano ?}
-Nous avons choisit de représenter uniquement un piano comme instrument, le métalophone étant très similaire, nous avons
-jugé inutile d'en faire un. Pour d'autre instruments tel que le trombonne, les notes auraient été plus difficiles à représenter,
+Nous avons choisit de représenter uniquement un piano comme instrument, le métallophone étant très similaire, nous avons
+jugé inutile d'en faire un. Pour d'autre instruments tel que le trombone, les notes auraient été plus difficiles à représenter,
 moins parlantes. Le logiciel doit rester simple et pour débutants.
 \subsubsection{Interactions}
 Quand l'utilisateur appuie sur une touche du piano (avec la souris ou le clavier),
@@ -105,7 +134,7 @@ Pour chaque touche du piano, si l'utilisateur peut afficher la bulle d'informati
 note et son raccourci clavier. Eh oui, il y a des raccourcis clavier !
 \subsection{Raccourcis clavier}
 Le but du logiciel est d'apprendre les bases du solfège, mais de les apprendre le plus professionnellement possible.
-Il ne sagit donc pas de savoir lire des partitions simple mais de les lire rapidement !
+Il ne s’agit donc pas de savoir lire des partitions simple mais de les lire rapidement !
 Et pour savoir si l'utilisateur lit une partitions rapidement, il faut qu'il ait pu la jouer rapidement.
 Jouer une partition à la souris étant particulièrement sportif et imprécis lorsque l'on joue rapidement, il est nécessaire
 de pouvoir la jouer avec le clavier, comme un musicien aurait fait avec un vrai piano.
@@ -114,7 +143,7 @@ Si chaque touche du piano correspond à une touche du clavier, il serait judicie
 qui sont associées. Et ceci sans avoir à afficher les bulles d'informations les unes après les autres. Nous avons donc décidé d'implémenter
 un moyen d'afficher sur chacune des notes, son raccourci clavier. Cette fonction est lancé par un bouton situé à proximité du piano, ce qui
 est évident puisque la fonction agit sur le piano (principe de chépakoi).
-Ce bouton est réprésenté par un clavier, ce qui est assez parlant pour un utilisateur qui aurait envie d'utiliser son clavier 
+Ce bouton est représenté par un clavier, ce qui est assez parlant pour un utilisateur qui aurait envie d'utiliser son clavier 
 pour jouer du piano.
 Bien sûr, au cas où, une bulle d'information indique ce que fait ce bouton si un utilisateur moins futé se posait la question.
 \subsection{Affichage du nom des notes}
@@ -151,7 +180,7 @@ Il y a deux critères pour l'évaluer:
 \end{itemize}
 \'A la fin de chaque test (=partition), le récapitulatif de ces deux points est affiché accompgné d'une appréciation.
 En plus, le personnage accompagnateur émet une petite remarque ayant pour but d'aider l'utilisateur à s'améliorer.
-Par exemple, si l'utilisateur met plus de temps à trouver les notes en ``#'' ou ``b-mol'', le personnage lui conseillera de les réviser.
+Par exemple, si l'utilisateur met plus de temps à trouver les notes en \# ou ``b-mol'', le personnage lui conseillera de les réviser.
 Pour implémenter ceci, nous nous servons de différents fichiers de log.
 \subsection{Progression}
 En plus de la note de fin de session, les utilisateurs peuvent être intéressés par la progression de leurs notes et de leurs vitesse
@@ -172,7 +201,7 @@ Appeler cette touche ``solution'' est assez signifiant. ``Aide débutant'' étan
 Il est aussi plus simple, pour quelqu'un qui n'a pas suivi un seul cours de solfège, d'avoir la possibilité d'avoir sous les yeux une
 partitions avec toutes les notes des deux gammes du logiciel et leurs nom correspondant juste en dessous.
 \subsection{Tutoriel au premier lancement}
-Afin que l'utilisateur prenne parfaitement en main le logiciel, surtout les plus jeunes. Nous avons décidé (suite à un test sur cobaye n°1),
+Afin que l'utilisateur prenne parfaitement en main le logiciel, surtout les plus jeunes. Nous avons décidé (suite à un test sur cobaye numéro 1),
 de lancer un petit tutoriel lors du premier démarrage. Ce tutoriel sérait dirigé par un personnage professeur accompagnant,
 pas trop humain, un robot ou une note de musique vivante, c'est en tout cas ce qui ressort dans nos sondages.
 Il expliquerait rapidement le but du programme, comment l'utiliser et comment avoir de l'aide en cas de besoin.
@@ -190,7 +219,7 @@ est inutile puisque la correction est immédiatement lancée automatiquement lor
 quel ``ahuri'' aurait l'idée de se faire évaluer sans avoir joué toutes ses notes!?
 En effet, ce bouton semble bien inutile, nous avons donc décidé de le retirer.
 \section{Test du logiciel par des cobayes}
-\subsection{Cobaye n°1: Johnna, 6ans1/2, CP}
+\subsection{Cobaye numéro 1: Johnna, 6ans$1/2$, CP}
 
 \begin{itemize}
 \item \'A l'époque le logiciel n'avait pas de tutoriel. Le cobaye n'avait pas vraiment d'idée de ce qui allait se passer en cochant les 
@@ -204,7 +233,7 @@ le cobaye.
 C'est ici que l'idée du tutoriel nous vient, il permettrait donc à se cobaye de savoir ce que font les boutons dont il ne savait pas
 l'action et de le guider sur les partitions.
 
-\subsection{Cobaye n°2:Charline}
+\subsection{Cobaye numéro 2:Charline}
 
 Curseur trop petit.
 Changement de taille du piano perturbant lors de l'affichage/masquage des options d'affichage.
