@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.3)  21 MAR 2016 16:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.3)  21 MAR 2016 17:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -514,7 +514,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 23.
 
-<./images/deb2.jpg, id=176, 566.115pt x 849.1725pt>
+<./images/deb2.jpg, id=156, 566.115pt x 849.1725pt>
 File: ./images/deb2.jpg Graphic file (type jpg)
  <use ./images/deb2.jpg>
 Package pdftex.def Info: ./images/deb2.jpg used on input line 29.
@@ -528,21 +528,33 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 3.
- [2])
+)
 \tf@toc=\write4
 \openout4 = `rapport.toc'.
 
- [3]
+ [2]
 Overfull \hbox (5.47368pt too wide) in paragraph at lines 52--53
 []\T1/cmr/m/n/10 Pourquoi ap-prendre le sol-fège? Afin d'évi-ter des ca-tas-tro
 phes au-di-tives comme
  []
 
-[4] <./images/scroller.png, id=251, 208.78pt x 156.585pt>
+[3] <./images/1Line.png, id=222, 799.98875pt x 715.67375pt>
+File: ./images/1Line.png Graphic file (type png)
+
+<use ./images/1Line.png>
+Package pdftex.def Info: ./images/1Line.png used on input line 89.
+(pdftex.def)             Requested size: 150.56305pt x 134.69083pt.
+ <./images/2Line.png, id=223, 803.0pt x 721.69624pt>
+File: ./images/2Line.png Graphic file (type png)
+
+<use ./images/2Line.png>
+Package pdftex.def Info: ./images/2Line.png used on input line 93.
+(pdftex.def)             Requested size: 150.56305pt x 135.3177pt.
+ <./images/scroller.png, id=224, 208.78pt x 156.585pt>
 File: ./images/scroller.png Graphic file (type png)
 
 <use ./images/scroller.png>
-Package pdftex.def Info: ./images/scroller.png used on input line 92.
+Package pdftex.def Info: ./images/scroller.png used on input line 104.
 (pdftex.def)             Requested size: 125.46921pt x 94.10223pt.
 
 
@@ -551,93 +563,67 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5 <./images/scroller.png>]
-<./images/correct.png, id=257, 139.52126pt x 133.49875pt>
+[4 <./images/1Line.png> <./images/2Line.png>]
+<./images/correct.png, id=230, 139.52126pt x 133.49875pt>
 File: ./images/correct.png Graphic file (type png)
 
 <use ./images/correct.png>
-Package pdftex.def Info: ./images/correct.png used on input line 97.
+Package pdftex.def Info: ./images/correct.png used on input line 109.
 (pdftex.def)             Requested size: 125.46921pt x 120.05608pt.
 
-<./images/toolBar.png, id=258, 283.0575pt x 336.25626pt>
+<./images/toolBar.png, id=231, 283.0575pt x 336.25626pt>
 File: ./images/toolBar.png Graphic file (type png)
 
 <use ./images/toolBar.png>
-Package pdftex.def Info: ./images/toolBar.png used on input line 109.
+Package pdftex.def Info: ./images/toolBar.png used on input line 121.
 (pdftex.def)             Requested size: 125.46921pt x 149.05121pt.
- [6 <./images/correct.png> <./images/toolBar.png>]
-[7] <./images/clavier.png, id=270, 301.125pt x 93.34875pt>
-File: ./images/clavier.png Graphic file (type png)
-
-<use ./images/clavier.png>
-Package pdftex.def Info: ./images/clavier.png used on input line 154.
-(pdftex.def)             Requested size: 50.18768pt x 15.55713pt.
-
-<./images/doremi.png, id=271, 387.4475pt x 216.81pt>
-File: ./images/doremi.png Graphic file (type png)
- <use ./images/doremi.png>
-Package pdftex.def Info: ./images/doremi.png used on input line 177.
-(pdftex.def)             Requested size: 50.18768pt x 28.08372pt.
-
-<./images/doremi2.png, id=272, 360.34625pt x 200.75pt>
-File: ./images/doremi2.png Graphic file (type png)
-
-<use ./images/doremi2.png>
-Package pdftex.def Info: ./images/doremi2.png used on input line 183.
-(pdftex.def)             Requested size: 50.18768pt x 27.95776pt.
- [8 <./images/clavier.png> <./images/doremi.png>]
-<./images/undo.png, id=279, 513.92pt x 513.92pt>
-File: ./images/undo.png Graphic file (type png)
- <use ./images/undo.png>
-Package pdftex.def Info: ./images/undo.png used on input line 194.
-(pdftex.def)             Requested size: 50.18768pt x 50.18736pt.
-
-[9 <./images/doremi2.png> <./images/undo.png>] [10]
+ [5 <./images/scroller.png> <./images/correct.png>]
+[6 <./images/toolBar.png>] [7] [8] [9]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 283.
+(hyperref)                removing `math shift' on input line 235.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 283.
+(hyperref)                removing `math shift' on input line 235.
 
-[11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 310.
- [12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 310.
+[10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 263.
+ [11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 263.
  (./rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 310.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 310.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 263.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 263.
 Package rerunfilecheck Info: File `rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 1CFC72E099D74D0D429EA145556240F5;3031.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 310.
+(rerunfilecheck)             Checksum: 6D51603703A99E96811F9ED1569B380A;2668.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 263.
  ) 
 Here is how much of TeX's memory you used:
- 6613 strings out of 494999
- 94836 string characters out of 6180228
- 185352 words of memory out of 5000000
- 9697 multiletter control sequences out of 15000+600000
+ 6592 strings out of 494999
+ 94437 string characters out of 6180228
+ 184352 words of memory out of 5000000
+ 9684 multiletter control sequences out of 15000+600000
  14620 words of font info for 34 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 34i,11n,43p,679b,495s stack positions out of 5000i,500n,10000p,200000b,80000s
- </comptes/E129986P/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </
-comptes/E129986P/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </compt
-es/E129986P/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </comptes/E1
-29986P/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </comptes/E129986
-P/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1000.600pk> </comptes/E129986P/.te
-xmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </comptes/E129986P/.texmf-v
-ar/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </comptes/E129986P/.texmf-var/fo
-nts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </comptes/E129986P/.texmf-var/fonts/p
-k/ljfour/jknappen/ec/eccc1728.600pk> </comptes/E129986P/.texmf-var/fonts/pk/ljf
+ 30i,11n,43p,679b,447s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </comptes/E104607D/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </
+comptes/E104607D/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </compt
+es/E104607D/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </comptes/E1
+04607D/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </comptes/E104607
+D/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1000.600pk> </comptes/E104607D/.te
+xmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </comptes/E104607D/.texmf-v
+ar/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </comptes/E104607D/.texmf-var/fo
+nts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </comptes/E104607D/.texmf-var/fonts/p
+k/ljfour/jknappen/ec/eccc1728.600pk> </comptes/E104607D/.texmf-var/fonts/pk/ljf
 our/jknappen/ec/ecrm1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
 .pfb>
-Output written on rapport.pdf (12 pages, 278556 bytes).
+Output written on rapport.pdf (11 pages, 283478 bytes).
 PDF statistics:
- 701 PDF objects out of 1000 (max. 8388607)
- 327 compressed objects within 4 object streams
- 57 named destinations out of 1000 (max. 500000)
- 385 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 656 PDF objects out of 1000 (max. 8388607)
+ 298 compressed objects within 3 object streams
+ 51 named destinations out of 1000 (max. 500000)
+ 335 words of extra memory for PDF output out of 10000 (max. 10000000)
 

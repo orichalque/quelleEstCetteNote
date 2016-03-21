@@ -27,6 +27,7 @@ Piano *pi;
 
 void setElise(){
     fileNameToPlay = ":/new/prefix1/part_lettre_elise.txt";
+
     if (po != NULL){
         po -> setFileName(fileNameToPlay);
         po -> update();
