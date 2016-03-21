@@ -1,13 +1,13 @@
 #include "notereader.h"
-
+#include <QVector>
 using namespace std;
 
 NoteReader::NoteReader()
 {
 }
 
-vector<QString> NoteReader::readNotes(QString fileName){
-    vector<QString> notes;
+QVector<QString> NoteReader::readNotes(QString fileName){
+   QVector<QString> notes;
    QFile file(fileName);
    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
 
@@ -24,7 +24,6 @@ vector<QString> NoteReader::readNotes(QString fileName){
       }
 
    }
-   cout << "Nombre de notes: " << notes.size() << endl;
    file.close();
    return notes;
 }

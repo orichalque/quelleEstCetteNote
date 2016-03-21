@@ -10,7 +10,7 @@ class NoteReader
 {
 public:
     NoteReader();
-    std::vector<QString> readNotes(QString fileName);
+    QVector<QString> readNotes(QString fileName);
 };
 
 #endif // NOTEREADER_H

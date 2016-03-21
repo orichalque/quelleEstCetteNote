@@ -1,5 +1,6 @@
 #include "piano.h"
 #include "log.cpp"
+#include <QAbstractButton>
 #include <QVBoxLayout>
 #include <QSlider>
 #include <QVector>
@@ -15,6 +16,8 @@ Piano::Piano(QWidget *parent) :
     Pal.setColor(QPalette::Background, QColor::fromRgb(240, 240, 240));
     setAutoFillBackground(true);
     setPalette(Pal);
+
+    showing = false; //displaying the scorebox
 
     b_names_dip = false;
     b_racc_disp = false;
@@ -190,12 +193,32 @@ void Piano::retour_arriere(){
 
 }
 
+int Piano::scoreMsg(){
+    QMessageBox msgBox;
+    msgBox.setDefaultButton(QMessageBox::Cancel);
+    showing = true;
+    QString mesg = "Partie terminée\n Score: "+QString::number(nbOfSuccess)+" %";
+    msgBox.setText(mesg);
+    msgBox.addButton(tr("Réinitialiser la portée"), QMessageBox::NoRole);
+    QAbstractButton* pButtonContinue = msgBox.addButton(tr("Recommencer"), QMessageBox::YesRole);
+    notes_jouees->clear();
+    int ret = msgBox.exec();
+    if (msgBox.clickedButton() == pButtonContinue){
+
+        return 1;
+    } else {
+
+        return 0;
+    }
+}
+
 QVector<bool>* Piano::comparaison(QVector<QString> *partition){
     QVector<bool> *tabCorrection = new QVector<bool>();
     if(notes_jouees->size()<=partition->size()){
         for(int i=0;i<notes_jouees->size();i++){
            if(notes_jouees->at(i).compare(partition->at(i))==0){
                tabCorrection->append(true);
+               nbOfSuccess++;
            }else{
                tabCorrection->append(false);
            }
@@ -210,8 +233,12 @@ QVector<bool>* Piano::comparaison(QVector<QString> *partition){
             }
          }
     }
-    return tabCorrection;
 
+    if (!this->showing){
+        nbOfSuccess = (100*(nbOfSuccess/tabCorrection->size()));
+    }
+
+    return tabCorrection;
 }
 
 void Piano::checking(bool checked){

@@ -15,6 +15,8 @@ public:
     explicit Piano(QWidget *parent = 0);
     QVector<QString> *notes_jouees;
     QVector<bool>* comparaison(QVector<QString> *partition);
+    int scoreMsg();
+    bool showing;
 
 signals:
     void played();
@@ -23,7 +25,7 @@ private:
     QVector<Touche*> *notes;
     bool b_racc_disp;
     bool b_names_dip;
-
+    int nbOfSuccess;
 
 public slots:
     void retour_arriere();

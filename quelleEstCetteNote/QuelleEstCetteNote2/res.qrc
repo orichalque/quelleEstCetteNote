@@ -35,5 +35,9 @@
         <file>black_upLine.png</file>
         <file>black_diese.png</file>
         <file>son/back.wav</file>
+        <file>green.png</file>
+        <file>red.png</file>
+        <file>green_diese.png</file>
+        <file>red_diese.png</file>
     </qresource>
 </RCC>
