@@ -1,15 +1,15 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.1.25)  20 MAR 2016 23:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.3)  21 MAR 2016 16:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **rapport.tex
 (./rapport.tex
-LaTeX2e <2015/01/01>
-Babel <3.9l> and hyphenation patterns for 2 languages loaded.
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 4 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -24,63 +24,48 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \bibindent=\dimen102
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2014/09/25 3.9l The Babel package
+Package: babel 2013/12/03 3.9h The Babel package
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel-french/frenchb.ldf
-Language: frenchb 2015/06/26 v3.1g French support from the babel system
+Language: frenchb 2013/12/30 v2.6g French support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2014/09/25 3.9l Babel common definitions
+File: babel.def 2013/12/03 3.9h Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
-\l@french = a dialect from \language\l@nohyphenation 
-
-
-Package babel Warning: No hyphenation patterns were preloaded for
-(babel)                the language `French' into the format.
-(babel)                Please, configure your TeX system to add them and
-(babel)                rebuild the format. Now I will use the patterns
-(babel)                preloaded for \language=nohyphenation instead on input l
-ine 75.
-
-\l@acadian = a dialect from \language\l@french 
-\l@canadien = a dialect from \language\l@french 
-\FBcolonskip=\skip43
-\FBthinskip=\skip44
 \FB@interchartokenstateORI=\count88
-Package babel Info: Making : an active character on input line 353.
-Package babel Info: Making ; an active character on input line 354.
-Package babel Info: Making ! an active character on input line 355.
-Package babel Info: Making ? an active character on input line 356.
-\FBguillskip=\skip45
-\FBguill@level=\count89
+Package babel Info: Making : an active character on input line 244.
+Package babel Info: Making ; an active character on input line 245.
+Package babel Info: Making ! an active character on input line 246.
+Package babel Info: Making ? an active character on input line 247.
 \FB@Mht=\dimen104
-\std@mcc=\count90
-\dec@mcc=\count91
-\listindentFB=\skip46
-\labelwidthFB=\skip47
-\leftmarginFB=\skip48
+\std@mcc=\count89
+\dec@mcc=\count90
+\listindentFB=\skip43
+\labelwidthFB=\skip44
+\leftmarginFB=\skip45
 \parindentFFN=\dimen105
-)) (/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2015/03/17 v1.2c Input encoding file
+Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
-File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
@@ -230,7 +215,7 @@ Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
-File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00B8 (decimal 184)
@@ -261,7 +246,7 @@ Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
-File: omsenc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -289,13 +274,13 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
@@ -303,7 +288,7 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 94.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
 (/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
@@ -314,25 +299,25 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count92
+\Gread@gobject=\count91
 ))
 \Gin@req@height=\dimen106
 \Gin@req@width=\dimen107
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-\fancy@headwidth=\skip49
-\f@ncyO@elh=\skip50
-\f@ncyO@erh=\skip51
-\f@ncyO@olh=\skip52
-\f@ncyO@orh=\skip53
-\f@ncyO@elf=\skip54
-\f@ncyO@erf=\skip55
-\f@ncyO@olf=\skip56
-\f@ncyO@orf=\skip57
+\fancy@headwidth=\skip46
+\f@ncyO@elh=\skip47
+\f@ncyO@erh=\skip48
+\f@ncyO@olh=\skip49
+\f@ncyO@orh=\skip50
+\f@ncyO@elf=\skip51
+\f@ncyO@erf=\skip52
+\f@ncyO@olf=\skip53
+\f@ncyO@orf=\skip54
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count93
+\c@float@type=\count92
 \float@exts=\toks17
 \float@box=\box26
 \@float@everytoks=\toks18
@@ -358,16 +343,16 @@ LaTeX Info: Redefining \up on input line 16.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count94
+\scratchcounter=\count93
 \scratchdimen=\dimen108
 \scratchbox=\box28
-\nofMPsegments=\count95
-\nofMParguments=\count96
+\nofMPsegments=\count94
+\nofMParguments=\count95
 \everyMPshowfont=\toks19
-\MPscratchCnt=\count97
+\MPscratchCnt=\count96
 \MPscratchDim=\dimen109
-\MPnumerator=\count98
-\makeMPintoPDFobject=\count99
+\MPnumerator=\count97
+\makeMPintoPDFobject=\count98
 \everyMPtoPDFconversion=\toks20
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -442,151 +427,61 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write3
 \openout3 = `rapport.toc'.
 
- [2]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 65.
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-
-! LaTeX Error: \verb ended by end of line.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.65 ...été décidé de représenter les \verb #
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[3]
-Overfull \hbox (4.13696pt too wide) in paragraph at lines 95--99
-\T1/cmr/m/n/10 clavier), le programme lui confirme son action par une r�ponse v
-isuelle et auditive.
- []
-
-
-Overfull \hbox (7.77863pt too wide) in paragraph at lines 104--106
-[]\T1/cmr/m/n/10 Pour chaque touche du piano, si l'utilisateur peut afficher la
- bulle d'information
- []
-
+ [2] [3]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.1638pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4] [5]
-! You can't use `macro parameter character #' in horizontal mode.
-l.154 ...plus de temps à trouver les notes en ``#
-                                                  '' ou ``b-mol'', le person...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
+[4] <./images/clavier.png, id=25, 301.125pt x 93.34875pt>
+File: ./images/clavier.png Graphic file (type png)
 
+<use ./images/clavier.png>
+Package pdftex.def Info: ./images/clavier.png used on input line 124.
+(pdftex.def)             Requested size: 50.18768pt x 15.55713pt.
+ <./images/doremi.png, id=27, 387.4475pt x 216.81pt>
+File: ./images/doremi.png Graphic file (type png)
 
-Overfull \hbox (1.33209pt too wide) in paragraph at lines 157--160
-\T1/cmr/m/n/10 r�guli�rement, il ne faut donc pas que cette commande soit acces
-sible directement
- []
+<use ./images/doremi.png>
+Package pdftex.def Info: ./images/doremi.png used on input line 147.
+(pdftex.def)             Requested size: 50.18768pt x 28.08372pt.
+ [5 <./images/clavier.png> <./images/doremi.png>]
+<./images/doremi2.png, id=33, 360.34625pt x 200.75pt>
+File: ./images/doremi2.png Graphic file (type png)
 
+<use ./images/doremi2.png>
+Package pdftex.def Info: ./images/doremi2.png used on input line 153.
+(pdftex.def)             Requested size: 50.18768pt x 27.95776pt.
+ <./images/undo.png, id=34, 513.92pt x 513.92pt>
+File: ./images/undo.png Graphic file (type png)
 
-Overfull \hbox (13.30139pt too wide) in paragraph at lines 168--171
-\T1/cmr/m/n/10 touche appuyer. Appeler cette touche ``solution'' est assez sign
-ifiant. ``Aide d�butant''
- []
-
-[6]
-
-! Package inputenc Error: Unicode char \u8:° not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.175 ...décidé (suite à un test sur cobaye n°
-                                                  1),
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:° not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.193 ...section{Cobaye n°1: Johnna, 6ans1/2, CP}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Overfull \hbox (4.39069pt too wide) in paragraph at lines 196--198
-[]\T1/cmr/m/n/10 � l'�poque le logiciel n'avait pas de tutoriel. Le cobaye n'av
-ait pas vraiment
- []
-
-[7]
-
-! Package inputenc Error: Unicode char \u8:° not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.207 \subsection{Cobaye n°2:Charline}
-                                       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Overfull \hbox (55.79468pt too wide) in paragraph at lines 209--211
-[]\T1/cmr/m/n/10 Curseur trop petit. Changement de taille du piano perturbant l
-ors de l'affichage/masquage
- []
-
-
-! Package inputenc Error: Unicode char \u8:° not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.215 \end{document}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[8] (./rapport.aux) ) 
+<use ./images/undo.png>
+Package pdftex.def Info: ./images/undo.png used on input line 164.
+(pdftex.def)             Requested size: 50.18768pt x 50.18736pt.
+ [6 <./images/doremi2.png> <./images/undo.png>] [7]
+[8] [9] (./rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 3194 strings out of 495000
- 42818 string characters out of 6181169
- 105826 words of memory out of 5000000
- 6379 multiletter control sequences out of 15000+600000
- 14247 words of font info for 34 fonts, out of 8000000 for 9000
+ 2985 strings out of 494999
+ 39420 string characters out of 6180228
+ 104540 words of memory out of 5000000
+ 6154 multiletter control sequences out of 15000+600000
+ 13934 words of font info for 33 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 37i,10n,43p,462b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/e
-ctt1000.600pk> </home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200
-.600pk> </home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk>
- </home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home
-/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1000.600pk> </home/dennis
-man/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/dennisman/.te
-xmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/dennisman/.texmf-var
-/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/dennisman/.texmf-var/fonts/
-pk/ljfour/jknappen/ec/eccc1728.600pk> </home/dennisman/.texmf-var/fonts/pk/ljfo
-ur/jknappen/ec/ecrm1728.600pk>
-Output written on rapport.pdf (8 pages, 178416 bytes).
+ 37i,10n,43p,240b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </comptes/E129986P/.texmf-var/fonts/pk/ljfour/jknappe
+n/ec/ecbx1200.600pk> </comptes/E129986P/.texmf-var/fonts/pk/ljfour/jknappen/ec/
+ecbx1000.600pk> </comptes/E129986P/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1
+440.600pk> </comptes/E129986P/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1000.6
+00pk> </comptes/E129986P/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk>
+ </comptes/E129986P/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </co
+mptes/E129986P/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </comptes
+/E129986P/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1728.600pk> </comptes/E129
+986P/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
+Output written on rapport.pdf (9 pages, 220394 bytes).
 PDF statistics:
- 388 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
+ 399 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
