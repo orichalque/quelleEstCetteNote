@@ -14,7 +14,6 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    note.cpp \
     piano.cpp \
     touche.cpp \
     portee.cpp \
@@ -22,7 +21,6 @@ SOURCES += main.cpp\
     notereader.cpp
 
 HEADERS  += mainwindow.h \
-    note.h \
     piano.h \
     touche.h \
     portee.h \
