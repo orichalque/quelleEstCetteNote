@@ -28,10 +28,14 @@ Piano::Piano(QWidget *parent) :
     QPushButton *raccButt= new QPushButton(QString(""),this);
     QPushButton *noteNames = new QPushButton(QString(""),this);
 
-    QCheckBox *checkB = new QCheckBox(QString("options"),this);
-    QPushButton *retour = new QPushButton(QString("Retour"),this);
+    QCheckBox *checkB = new QCheckBox(QString("options affichage"),this);
+    QPushButton *retour = new QPushButton(QString(""),this);
     checkB->setChecked(true);
-    retour->move(700,0);
+    retour->move(740,0);
+    retour->setStyleSheet("border-image: url(:/new/prefix1/undo.png)");
+    retour->resize(50,50);
+    QPushButton *solution = new QPushButton(QString("Solution"),this);
+    solution->move(135,0);
     Touche* doM = new Touche(this, QString("tab"),QString("Do"));
     int sizeT= 38;//doM->width();
     //QMessageBox::information(new QWidget(),QString("taille "),QString::number(sizeT));

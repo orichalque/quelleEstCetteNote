@@ -39,5 +39,6 @@
         <file>red.png</file>
         <file>green_diese.png</file>
         <file>red_diese.png</file>
+        <file>undo.png</file>
     </qresource>
 </RCC>
