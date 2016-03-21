@@ -26,16 +26,22 @@ Piano::Piano(QWidget *parent) :
     setFixedSize(800, 310);
 
     QPushButton *raccButt= new QPushButton(QString(""),this);
+    raccButt->setToolTip(QString("Affiche les raccourcis clavier pour le piano"));
     QPushButton *noteNames = new QPushButton(QString(""),this);
+    noteNames->setToolTip(QString("Affiche le nom des notes sur le piano"));
 
     QCheckBox *checkB = new QCheckBox(QString("options affichage"),this);
+    checkB->setToolTip(QString("Affiche/cache les options d'affiche du piano"));
     QPushButton *retour = new QPushButton(QString(""),this);
     checkB->setChecked(true);
     retour->move(740,0);
     retour->setStyleSheet("border-image: url(:/new/prefix1/undo.png)");
+    retour->setToolTip(QString("Annule la dernière note jouée"));
     retour->resize(50,50);
     QPushButton *solution = new QPushButton(QString("Solution"),this);
-    solution->move(135,0);
+    solution->setToolTip(QString("Aide: Indique la note suivante sur le piano"));
+    solution->move(0,10);
+    checkB->move(0,282);
     Touche* doM = new Touche(this, QString("tab"),QString("Do"));
     int sizeT= 38;//doM->width();
     //QMessageBox::information(new QWidget(),QString("taille "),QString::number(sizeT));
