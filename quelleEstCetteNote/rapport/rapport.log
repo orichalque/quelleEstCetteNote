@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.1.25)  19 MAR 2016 15:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.1.25)  20 MAR 2016 23:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -459,29 +459,134 @@ l.65 ...été décidé de représenter les \verb #
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[3] [4] (./rapport.aux) ) 
+[3]
+Overfull \hbox (4.13696pt too wide) in paragraph at lines 95--99
+\T1/cmr/m/n/10 clavier), le programme lui confirme son action par une r�ponse v
+isuelle et auditive.
+ []
+
+
+Overfull \hbox (7.77863pt too wide) in paragraph at lines 104--106
+[]\T1/cmr/m/n/10 Pour chaque touche du piano, si l'utilisateur peut afficher la
+ bulle d'information
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.1638pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4] [5]
+! You can't use `macro parameter character #' in horizontal mode.
+l.154 ...plus de temps à trouver les notes en ``#
+                                                  '' ou ``b-mol'', le person...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+Overfull \hbox (1.33209pt too wide) in paragraph at lines 157--160
+\T1/cmr/m/n/10 r�guli�rement, il ne faut donc pas que cette commande soit acces
+sible directement
+ []
+
+
+Overfull \hbox (13.30139pt too wide) in paragraph at lines 168--171
+\T1/cmr/m/n/10 touche appuyer. Appeler cette touche ``solution'' est assez sign
+ifiant. ``Aide d�butant''
+ []
+
+[6]
+
+! Package inputenc Error: Unicode char \u8:° not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.175 ...décidé (suite à un test sur cobaye n°
+                                                  1),
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:° not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.193 ...section{Cobaye n°1: Johnna, 6ans1/2, CP}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (4.39069pt too wide) in paragraph at lines 196--198
+[]\T1/cmr/m/n/10 � l'�poque le logiciel n'avait pas de tutoriel. Le cobaye n'av
+ait pas vraiment
+ []
+
+[7]
+
+! Package inputenc Error: Unicode char \u8:° not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.207 \subsection{Cobaye n°2:Charline}
+                                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (55.79468pt too wide) in paragraph at lines 209--211
+[]\T1/cmr/m/n/10 Curseur trop petit. Changement de taille du piano perturbant l
+ors de l'affichage/masquage
+ []
+
+
+! Package inputenc Error: Unicode char \u8:° not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.215 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[8] (./rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 3196 strings out of 495000
- 42821 string characters out of 6181169
- 102898 words of memory out of 5000000
- 6381 multiletter control sequences out of 15000+600000
+ 3194 strings out of 495000
+ 42818 string characters out of 6181169
+ 105826 words of memory out of 5000000
+ 6379 multiletter control sequences out of 15000+600000
  14247 words of font info for 34 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 37i,10n,43p,604b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/
-ec/ectt1000.600pk> </home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx
-1200.600pk> </home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.60
-0pk> </home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </
-home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1000.600pk> </home/de
-nnisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/dennisman
-/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/dennisman/.texmf
--var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/dennisman/.texmf-var/fo
-nts/pk/ljfour/jknappen/ec/eccc1728.600pk> </home/dennisman/.texmf-var/fonts/pk/
-ljfour/jknappen/ec/ecrm1728.600pk>
-Output written on rapport.pdf (4 pages, 149129 bytes).
+ 37i,10n,43p,462b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/e
+ctt1000.600pk> </home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200
+.600pk> </home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk>
+ </home/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home
+/dennisman/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1000.600pk> </home/dennis
+man/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/dennisman/.te
+xmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/dennisman/.texmf-var
+/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/dennisman/.texmf-var/fonts/
+pk/ljfour/jknappen/ec/eccc1728.600pk> </home/dennisman/.texmf-var/fonts/pk/ljfo
+ur/jknappen/ec/ecrm1728.600pk>
+Output written on rapport.pdf (8 pages, 178416 bytes).
 PDF statistics:
- 305 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
+ 388 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -4,19 +4,32 @@
 \contentsline {subsection}{\numberline {1.2}Interface g\IeC {\'e}n\IeC {\'e}rale}{3}
 \contentsline {subsection}{\numberline {1.3}Plan}{3}
 \contentsline {section}{\numberline {2}Diff\IeC {\'e}rents \IeC {\'e}l\IeC {\'e}ments de l'interface}{4}
-\contentsline {subsection}{\numberline {2.1}Piano}{4}
-\contentsline {subsection}{\numberline {2.2}Port\IeC {\'e}e}{4}
-\contentsline {subsection}{\numberline {2.3}Menu}{4}
-\contentsline {subsection}{\numberline {2.4}Couleur de fond}{4}
-\contentsline {subsection}{\numberline {2.5}Bind clavier}{4}
-\contentsline {subsection}{\numberline {2.6}Affichage des raccourcis}{4}
-\contentsline {subsection}{\numberline {2.7}Affichage du nom des notes}{4}
-\contentsline {subsection}{\numberline {2.8}Masquer les options}{4}
-\contentsline {subsection}{\numberline {2.9}Note de fin de session}{4}
-\contentsline {subsection}{\numberline {2.10}Progression}{4}
-\contentsline {subsection}{\numberline {2.11}Choix de partitions}{4}
-\contentsline {subsection}{\numberline {2.12}Aide pour les d\IeC {\'e}butants}{4}
-\contentsline {subsection}{\numberline {2.13}Diff\IeC {\'e}rents logs pour diff\IeC {\'e}rentes analyses = Compte rendu du jeu}{4}
-\contentsline {section}{\numberline {3}Paper Prototype}{4}
-\contentsline {section}{\numberline {4}Test du logiciel par des cobayes}{4}
-\contentsline {section}{\numberline {5}Conclusion}{4}
+\contentsline {subsection}{\numberline {2.1}Port\IeC {\'e}e}{4}
+\contentsline {subsection}{\numberline {2.2}Menu}{4}
+\contentsline {subsection}{\numberline {2.3}Couleur de fond}{4}
+\contentsline {subsection}{\numberline {2.4}Piano}{4}
+\contentsline {subsubsection}{\numberline {2.4.1}Pourquoi le Piano ?}{4}
+\contentsline {subsubsection}{\numberline {2.4.2}Interactions}{4}
+\contentsline {subsubsection}{\numberline {2.4.3}Couleurs}{4}
+\contentsline {subsubsection}{\numberline {2.4.4}Bulle d'information}{4}
+\contentsline {subsection}{\numberline {2.5}Raccourcis clavier}{4}
+\contentsline {subsection}{\numberline {2.6}Affichage des raccourcis}{5}
+\contentsline {subsection}{\numberline {2.7}Affichage du nom des notes}{5}
+\contentsline {subsection}{\numberline {2.8}Masquer les options}{5}
+\contentsline {subsubsection}{\numberline {2.8.1}Pollution visuelle}{5}
+\contentsline {subsubsection}{\numberline {2.8.2}Optimisation de l'espace}{5}
+\contentsline {subsubsection}{\numberline {2.8.3}Nom}{6}
+\contentsline {subsection}{\numberline {2.9}Note de fin de session}{6}
+\contentsline {subsection}{\numberline {2.10}Progression}{6}
+\contentsline {subsection}{\numberline {2.11}Choix de partitions}{6}
+\contentsline {subsection}{\numberline {2.12}Aide pour les d\IeC {\'e}butants}{7}
+\contentsline {subsubsection}{\numberline {2.12.1}Aide note apres note}{7}
+\contentsline {subsubsection}{\numberline {2.12.2}Partition mod\IeC {\`e}le}{7}
+\contentsline {subsection}{\numberline {2.13}Tutoriel au premier lancement}{7}
+\contentsline {section}{\numberline {3}Paper Prototype}{7}
+\contentsline {subsection}{\numberline {3.1}Lien}{7}
+\contentsline {subsection}{\numberline {3.2}Essais et cons\IeC {\'e}quences}{7}
+\contentsline {section}{\numberline {4}Test du logiciel par des cobayes}{7}
+\contentsline {subsection}{\numberline {4.1}Cobaye n\GenericError {(inputenc) }{Package inputenc Error: Unicode char \u 8:° not set up for use with LaTeX}{See the inputenc package documentation for explanation.}{Your command was ignored.\MessageBreak Type I <command> <return> to replace it with another command,\MessageBreak or <return> to continue without it.}1: Johnna, 6ans1/2, CP}{7}
+\contentsline {subsection}{\numberline {4.2}Cobaye n\GenericError {(inputenc) }{Package inputenc Error: Unicode char \u 8:° not set up for use with LaTeX}{See the inputenc package documentation for explanation.}{Your command was ignored.\MessageBreak Type I <command> <return> to replace it with another command,\MessageBreak or <return> to continue without it.}2:Charline}{8}
+\contentsline {section}{\numberline {5}Conclusion}{8}

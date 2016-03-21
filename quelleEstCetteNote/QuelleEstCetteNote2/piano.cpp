@@ -201,13 +201,12 @@ int Piano::scoreMsg(){
     msgBox.setText(mesg);
     msgBox.addButton(tr("Réinitialiser la portée"), QMessageBox::NoRole);
     QAbstractButton* pButtonContinue = msgBox.addButton(tr("Recommencer"), QMessageBox::YesRole);
-    notes_jouees->clear();
+
     int ret = msgBox.exec();
     if (msgBox.clickedButton() == pButtonContinue){
-
         return 1;
     } else {
-
+        notes_jouees->clear();
         return 0;
     }
 }
