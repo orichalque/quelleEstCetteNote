@@ -31,6 +31,10 @@ void setElise(){
         po -> setFileName(fileNameToPlay);
         po -> update();
     }
+    if (po -> piano != NULL){
+        po -> piano -> notes_jouees->clear();
+        po -> piano -> notes_jouees = new QVector<QString>();
+    }
 }
 
 void setBoyard(){
@@ -39,6 +43,10 @@ void setBoyard(){
         po->setFileName(fileNameToPlay);
         po -> update();
     }
+    if (po -> piano != NULL){
+        po -> piano -> notes_jouees->clear();
+        po -> piano -> notes_jouees = new QVector<QString>();
+    }
 }
 
 void setNooby(){
@@ -46,6 +54,10 @@ void setNooby(){
     if (po != NULL){
         po->setFileName(fileNameToPlay);
         po -> update();
+    }
+    if (po -> piano != NULL){
+        po -> piano -> notes_jouees->clear();
+        po -> piano -> notes_jouees = new QVector<QString>();
     }
 }
 
@@ -98,8 +110,6 @@ void addMenus(QWidget *w){
       menubar->addMenu(part);
 
       menubar->show();
-
-
 }
 
 
@@ -117,19 +127,17 @@ int main(int argc, char *argv[])
     w.setAutoFillBackground(true);
     w.setPalette(Pal);
 
-    addMenus(&w);
 
     po = new Portee(&w);
     Piano *pi = new Piano(&w);
     po->setPiano(pi);
 
+    addMenus(&w);
     QVBoxLayout qvbox;
     qvbox.addWidget(po);
     qvbox.addWidget(pi);
     w.setLayout(&qvbox);
 
-    //MainWindow w;
-    //tb->show();
     w.show();
 
     return a.exec();

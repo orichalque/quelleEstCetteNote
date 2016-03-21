@@ -72,6 +72,7 @@ void Portee::paintEvent(QPaintEvent *event){
     float y(2*upSpace);
     for (int i = 0; i < nbOfLine; ++i){
         for (int j = 0; j < 5; ++j){
+
             p.drawLine(xBegin, y, xEnd, y);
             y += interLineSpace;
         }
@@ -128,7 +129,7 @@ void Portee::paintEvent(QPaintEvent *event){
         note *n;
         //(xNote,yNote , w*0.025 ,interLineSpace)
         vector<QRectF *> rectToDraw;
-        int nbOfNotesDrawn;
+        int nbOfNotesDrawn(0);
         bool up, down, mid, diese;
 
         /*CORRECTION*/
@@ -152,8 +153,11 @@ void Portee::paintEvent(QPaintEvent *event){
                 xNote = 0.22*w;
             }
 
-            if (this -> piano != NULL && this->piano->notes_jouees->size()== nbOfNotesDrawn){
+            if (this -> piano != NULL && piano->notes_jouees->size()== nbOfNotesDrawn){
                 //Scroller
+                QPen pen;
+                pen.setWidth(2);
+                p.setPen(pen);
                 p.drawLine(xNote, yNote - 2*interLineSpace, xNote , yNote + 5*interLineSpace);
             }
 

@@ -1,38 +1,44 @@
 \select@language {french}
-\contentsline {section}{\numberline {1}Introduction}{3}
-\contentsline {subsection}{\numberline {1.1}Probl\IeC {\'e}matique et but du projet}{3}
-\contentsline {subsection}{\numberline {1.2}Interface g\IeC {\'e}n\IeC {\'e}rale}{3}
-\contentsline {subsection}{\numberline {1.3}Plan}{3}
-\contentsline {section}{\numberline {2}Diff\IeC {\'e}rents \IeC {\'e}l\IeC {\'e}ments de l'interface}{4}
-\contentsline {subsection}{\numberline {2.1}Port\IeC {\'e}e}{4}
-\contentsline {subsection}{\numberline {2.2}Menu}{4}
-\contentsline {subsection}{\numberline {2.3}Couleur de fond}{4}
-\contentsline {subsection}{\numberline {2.4}Piano}{4}
-\contentsline {subsubsection}{\numberline {2.4.1}Pourquoi le Piano ?}{4}
-\contentsline {subsubsection}{\numberline {2.4.2}Interactions}{4}
-\contentsline {subsubsection}{\numberline {2.4.3}Couleurs}{4}
-\contentsline {subsubsection}{\numberline {2.4.4}Bulles d'information}{4}
-\contentsline {subsection}{\numberline {2.5}Raccourcis clavier}{4}
-\contentsline {subsection}{\numberline {2.6}Affichage des raccourcis}{5}
-\contentsline {subsection}{\numberline {2.7}Affichage du nom des notes}{5}
-\contentsline {subsubsection}{\numberline {2.7.1}Repr\IeC {\'e}sentation}{5}
-\contentsline {subsection}{\numberline {2.8}Annuler la Note}{6}
-\contentsline {subsection}{\numberline {2.9}Masquer les options}{6}
-\contentsline {subsubsection}{\numberline {2.9.1}Pollution visuelle}{6}
-\contentsline {subsubsection}{\numberline {2.9.2}Optimisation de l'espace}{6}
-\contentsline {subsubsection}{\numberline {2.9.3}Nom}{7}
-\contentsline {subsubsection}{\numberline {2.9.4}Position}{7}
-\contentsline {subsection}{\numberline {2.10}Note de fin de session}{7}
-\contentsline {subsection}{\numberline {2.11}Progression}{7}
-\contentsline {subsection}{\numberline {2.12}Choix de partitions}{7}
-\contentsline {subsection}{\numberline {2.13}Aide pour les d\IeC {\'e}butants}{8}
-\contentsline {subsubsection}{\numberline {2.13.1}Aide note apr\IeC {\`e}s note}{8}
-\contentsline {subsubsection}{\numberline {2.13.2}Partition mod\IeC {\`e}le}{8}
-\contentsline {subsection}{\numberline {2.14}Tutoriel au premier lancement}{8}
-\contentsline {section}{\numberline {3}Paper Prototype}{8}
-\contentsline {subsection}{\numberline {3.1}Lien}{8}
-\contentsline {subsection}{\numberline {3.2}Essais et cons\IeC {\'e}quences}{8}
-\contentsline {section}{\numberline {4}Test du logiciel par des cobayes}{9}
-\contentsline {subsection}{\numberline {4.1}Cobaye n1: Johnna, 6ans1/2, CP}{9}
-\contentsline {subsection}{\numberline {4.2}Cobaye n2:Charline}{9}
-\contentsline {section}{\numberline {5}Conclusion}{9}
+\contentsline {section}{\numberline {1}Introduction}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}Motivation et but du projet}{4}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Interface g\IeC {\'e}n\IeC {\'e}rale}{4}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Plan}{4}{subsection.1.3}
+\contentsline {section}{\numberline {2}Diff\IeC {\'e}rents \IeC {\'e}l\IeC {\'e}ments de l'interface}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Port\IeC {\'e}e}{5}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Variabilit\IeC {\'e} de la port\IeC {\'e}e}{5}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Clef de sol \& Notes}{5}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Curseur de suivi}{5}{subsubsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.4}Correction}{5}{subsubsection.2.1.4}
+\contentsline {subsection}{\numberline {2.2}Menu}{6}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Couleur de fond}{7}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Piano}{7}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Pourquoi le Piano ?}{7}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Interactions}{7}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.3}Couleurs}{7}{subsubsection.2.4.3}
+\contentsline {subsubsection}{\numberline {2.4.4}Bulles d'information}{7}{subsubsection.2.4.4}
+\contentsline {subsection}{\numberline {2.5}Raccourcis clavier}{7}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Affichage des raccourcis}{8}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Affichage du nom des notes}{8}{subsection.2.7}
+\contentsline {subsubsection}{\numberline {2.7.1}Repr\IeC {\'e}sentation}{8}{subsubsection.2.7.1}
+\contentsline {subsection}{\numberline {2.8}Annuler la Note}{9}{subsection.2.8}
+\contentsline {subsection}{\numberline {2.9}Masquer les options}{9}{subsection.2.9}
+\contentsline {subsubsection}{\numberline {2.9.1}Pollution visuelle}{9}{subsubsection.2.9.1}
+\contentsline {subsubsection}{\numberline {2.9.2}Optimisation de l'espace}{9}{subsubsection.2.9.2}
+\contentsline {subsubsection}{\numberline {2.9.3}Nom}{9}{subsubsection.2.9.3}
+\contentsline {subsubsection}{\numberline {2.9.4}Position}{10}{subsubsection.2.9.4}
+\contentsline {subsection}{\numberline {2.10}Note de fin de session}{10}{subsection.2.10}
+\contentsline {subsection}{\numberline {2.11}Progression}{10}{subsection.2.11}
+\contentsline {subsection}{\numberline {2.12}Choix de partitions}{10}{subsection.2.12}
+\contentsline {subsection}{\numberline {2.13}Aide pour les d\IeC {\'e}butants}{11}{subsection.2.13}
+\contentsline {subsubsection}{\numberline {2.13.1}Aide note apr\IeC {\`e}s note}{11}{subsubsection.2.13.1}
+\contentsline {subsubsection}{\numberline {2.13.2}Partition mod\IeC {\`e}le}{11}{subsubsection.2.13.2}
+\contentsline {subsection}{\numberline {2.14}Tutoriel au premier lancement}{11}{subsection.2.14}
+\contentsline {section}{\numberline {3}Paper Prototype}{11}{section.3}
+\contentsline {subsection}{\numberline {3.1}Lien}{11}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Essais et cons\IeC {\'e}quences}{11}{subsection.3.2}
+\contentsline {section}{\numberline {4}Test du logiciel par des cobayes}{11}{section.4}
+\contentsline {subsection}{\numberline {4.1}Cobaye n1: Johnna, 6ans1/2, CP}{11}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Cobaye num\IeC {\'e}ro 1: Johnna, 6ans$1/2$, CP}{12}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Cobaye n2:Charline}{12}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Cobaye num\IeC {\'e}ro 2:Charline}{12}{subsection.4.4}
+\contentsline {section}{\numberline {5}Conclusion}{12}{section.5}
